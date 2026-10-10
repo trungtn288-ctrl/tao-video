@@ -1,6 +1,12 @@
 name: Render Remotion video
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'remotion/**'
+      - 'AGENTS.md'
+      - '.github/workflows/render-video.yml'
   workflow_dispatch:
     inputs:
       composition:
@@ -38,7 +44,36 @@ jobs:
       - name: Render MP4 on GitHub
         env:
           COMPOSITION: ${{ inputs.composition }}
-        run: pnpm exec remotion render src/index.ts "$COMPOSITION" out/video.mp4 --codec=h264 --concurrency=2
+        run: pnpm exec remotion render src/index.ts "${COMPOSITION:-MealWalkKnowledgeR3}" out/video.mp4 --codec=h264 --concurrency=2
+      - name: Check MP4 and extract representative frames
+        run: |
+          sudo apt-get update && sudo apt-get install -y ffmpeg
+          ffprobe -v error -show_format -show_streams -of json out/video.mp4 > out/metadata.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          data = json.loads(Path('out/metadata.json').read_text())
+          video = next(s for s in data['streams'] if s['codec_type'] == 'video')
+          assert video['codec_name'] == 'h264', video
+          assert float(data['format']['duration']) > 0, data
+          assert Path('out/video.mp4').stat().st_size > 0
+          PY
+          mkdir -p out/frames
+          duration=$(ffprobe -v error -show_entries format=duration -of csv=p=0 out/video.mp4)
+          for percent in 0 25 50 75 95; do
+            timestamp=$(awk -v duration="$duration" -v percent="$percent" 'BEGIN {printf "%.3f", duration * percent / 100}')
+            ffmpeg -v error -ss "$timestamp" -i out/video.mp4 -frames:v 1 "out/frames/frame-${percent}.png"
+            test -s "out/frames/frame-${percent}.png"
+          done
+      - name: Downloadable frame checks
+        uses: actions/upload-artifact@v4
+        with:
+          name: remotion-frames-${{ github.run_number }}
+          path: |
+            remotion/out/frames/*.png
+            remotion/out/metadata.json
+          if-no-files-found: error
+          retention-days: 14
       - name: Downloadable video
         uses: actions/upload-artifact@v4
         with:

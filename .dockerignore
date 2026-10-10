@@ -1,0 +1,7 @@
+.git
+.env*
+data
+*.db*
+node_modules
+project-sources
+docs

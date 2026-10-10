@@ -1,5 +1,5 @@
 # AI Script Factory — Registry
-Bộ đề xuất V2.4.6 trên nền V2.4.5. Nguồn đề xuất nằm tại project-sources/v2.4.6 (25 file). Không tự active khi push repo.
+Mã registry tham chiếu cho AI Script Factory. Bộ 25 nguồn V2.4.6 chưa được công khai trong repository này.
 ## Trạng thái
 - Mã registry tham chiếu đã chuẩn bị; 13 kiểm tra lõi cục bộ PASS.
 - Chưa triển khai dịch vụ registry Cloud, chưa có endpoint dùng chung hoặc connector gọi từ ChatGPT.
@@ -17,4 +17,4 @@ API: POST /initialize, GET /snapshot?project=..., POST /transaction. Auth Bearer
 Backend kiểm CAS/lease/lifecycle/evidence-reference coverage; không tự chứng minh semantic novelty. AI client phải so nghĩa toàn blocking set và batch từ snapshot fresh, lưu evidence thật, CAS conflict refresh/recheck. Snapshot refs cần immutable shared storage; service tham chiếu hiện chưa tạo/verify object store.
 ## Acceptance deployment
 Actual persistence qua restart, negative-CAS concurrent clients, expired-owner fencing, approved-edit integrity, storage evidence refs, tool connectivity từ các chat, global semantic duplicate tests. Chỉ sau actual evidence mới registry AVAILABLE.
-Xem docs/DIFF_AUDIT.md. Không render/auto-publish nội dung.
+Không render/auto-publish nội dung.

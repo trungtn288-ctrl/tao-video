@@ -9,3 +9,10 @@
 - Follow the exact run/commit to completion, download the MP4 artifact to verify it is accessible, inspect the frame artifact, and return the workflow and artifact download links. Do not declare setup or a video complete on a queued run or missing artifact.
 - Artifacts expire after 14 days and GitHub artifact downloads require login. Keep source/assets in Git; do not commit generated MP4 files or credentials.
 - If CLI workflow dispatch is required, Cloud needs allowed access to `api.github.com` and an identity authorized for this repository (Contents write, Workflows write, Actions write/read). Configure credentials through the supported environment configuration UI, never in source or chat.
+
+## Project skill: Remotion Video V2
+
+- When the user requests Remotion Video V2, Remotion V2, or `$remotion-video-v2`, read `.agents/skills/remotion-video-v2/SKILL.md` and its linked references before creating or editing a video.
+- Resolve relative paths in the skill from its directory. The bundled JPEGs are layout references, not new video content.
+- V2 packages the uploaded V1 baseline for Cloud use; it does not claim a tested improvement to visuals or voice. Do not select V2 when the user explicitly requests V1.
+- Apply this repository's Cloud editing and GitHub Actions rendering workflow when following the skill.

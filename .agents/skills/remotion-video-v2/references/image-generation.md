@@ -12,7 +12,7 @@
 
 Dùng skill `imagegen` và `tools.image_gen__imagegen` tích hợp, một call cho mỗi hình; dựng prompt từ common + số/tiêu đề + scene. Ảnh là bitmap do engine tạo; Remotion chưa tham gia tạo26 ảnh. `transparent_background=false`, không input image, không tham số API key/model/seed/quality riêng. Các call độc lập được chạy nhóm, mỗi ảnh có prompt riêng, không ghép26 ảnh thành một contact sheet.
 
-Common gốc giữ nguyên trong original-image-common.txt. Catalog image-prompts-26.json giữ 26 mô tả và đường dẫn lịch sử của bộ ảnh gốc. Gói cập nhật hiện tại không chứa 26 ảnh WebP; mọi mục được đánh dấu asset_status=NOT_INCLUDED. Không coi đường dẫn lịch sử là file có sẵn hoặc khẳng định đã đối chiếu pixel. Mô tả21–26 còn nguyên văn;01–20 đã biên soạn lại thành recipe từ ghi nhận cảnh, không tuyên bố là log prompt nguyên văn. Không hứa tái sinh đúng từng pixel bằng prompt.
+Common gốc giữ nguyên trong original-image-common.txt. Catalog image-prompts-26.json giữ 26 mô tả và đường dẫn lịch sử của bộ ảnh gốc. Gói cập nhật có 14 ảnh WebP số 13–26 từ assets2.zip, đánh dấu asset_status=INCLUDED. Ảnh 01–12 chưa được cung cấp, đánh dấu NOT_INCLUDED. Chỉ đọc ảnh có file thật; không khẳng định đã đối chiếu với PNG gốc. Mô tả21–26 còn nguyên văn;01–20 đã biên soạn lại thành recipe từ ghi nhận cảnh, không tuyên bố là log prompt nguyên văn. Không hứa tái sinh đúng từng pixel bằng prompt.
 
 Ảnh catalog là tham chiếu thị giác, không template bắt buộc dùng màu bếp vàng/đồ cơm cho mọi chủ đề. Các đồ thị, bản đồ, mô hình khoa học, chữ UI và checklist của bộ26 chỉ minh họa cách trình bày; không dùng ảnh đó làm dữ liệu, chứng nhận QA, địa lý hay giải phẫu thật. Chi tiết nhỏ trong ảnh AI vẫn cần kiểm.
 

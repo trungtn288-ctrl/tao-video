@@ -19,3 +19,10 @@
 - Lưu baseline V2 trước cập nhật và baseline V1 từ đầu vào để đối chiếu.
 - 26 ảnh mẫu không được cung cấp; ghi NOT_INCLUDED trong catalog, giữ đầy đủ prompt và tiêu chí QA.
 - Chỉ kiểm package/helpers/glyph preflight; chưa tạo speech, hình mới hoặc render video, không tuyên bố QA nghe/xem đã đạt.
+
+### Bổ sung assets2.zip — 11/10/2026
+
+- Thêm 14 ảnh gốc WebP số 13–26 vào assets/visual-reference-26/, giữ nguyên byte.
+- Cập nhật catalog, hướng dẫn và inventory theo file thật; 01–12 vẫn NOT_INCLUDED.
+- Kiểm giải mã 14 ảnh 1536×1024 và xem contact sheet để đối chiếu số mục; không khẳng định toàn bộ chữ/chi tiết ảnh hoặc video đã QA.
+- Font/license/icon/hai ảnh bố cục trùng bản đã đóng gói, không thay đổi voice, font, chuẩn hoặc quy trình.

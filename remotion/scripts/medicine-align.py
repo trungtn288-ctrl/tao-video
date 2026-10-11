@@ -12,25 +12,42 @@ texts=script+extra+"CÙNG HOẠT CHẤT KHÁC TÊN Kiểm tra thành phần Hỏ
 missing=sorted(set(c for form in ['NFC','NFD'] for c in unicodedata.normalize(form,texts) if not c.isspace() and ord(c) not in cmap))
 assert not missing,missing
 duration=float(subprocess.check_output(['ffprobe','-v','error','-show_entries','format=duration','-of','csv=p=0',str(P/'narration.mp3')]))
-model=stable_whisper.load_model('small',device='cpu')
-result=model.align(str(P/'narration.mp3'),script,language='vi',original_split=True)
-assert result is not None
-result.save_as_json(str(OUT/'alignment.json'))
-data=result.to_dict()
+existing=Path('src/medicine/alignment.json')
+if existing.exists():
+    data=json.loads(existing.read_text(encoding='utf-8'))
+    (OUT/'alignment.json').write_text(json.dumps(data,ensure_ascii=False),encoding='utf-8')
+else:
+    model=stable_whisper.load_model('small',device='cpu')
+    result=model.align(str(P/'narration.mp3'),script,language='vi',original_split=True)
+    assert result is not None
+    result.save_as_json(str(OUT/'alignment.json'))
+    data=result.to_dict()
 words=[w for seg in data['segments'] for w in seg['words']]
 assert words and all(w['end']>=w['start'] for w in words)
 assert ''.join(w['word'] for w in words).split()==script.split(),('Script mismatch',words)
 captions=[dict(text=w['word'],startMs=round(w['start']*1000),endMs=round(w['end']*1000),timestampMs=round((w['start']+w['end'])*500),confidence=None) for w in words]
-# Word-level alignments are kept intact; layout pages hold at most 43 characters.
-pages=[]; group=[]
+# Balance caption pages within each sentence; never leave an orphan word from a long sentence.
+sentences=[]; sentence=[]
 for w in captions:
-    candidate=group+[w]
-    if group and len(''.join(x['text'] for x in candidate).strip())>43:
-        pages.append(group); group=[]
-    group.append(w)
+    sentence.append(w)
     if re.search(r'[.!?;]$',w['text'].strip()):
-        pages.append(group);group=[]
-if group:pages.append(group)
+        sentences.append(sentence);sentence=[]
+if sentence:sentences.append(sentence)
+pages=[]
+import math
+for sentence in sentences:
+    remaining=sentence[:]
+    count=math.ceil(len(''.join(w['text'] for w in remaining).strip())/43)
+    while remaining:
+        target=len(''.join(w['text'] for w in remaining).strip())/count
+        candidates=[i for i in range(1,len(remaining)+1) if len(''.join(w['text'] for w in remaining[:i]).strip())<=43]
+        if count==1:
+            take=len(remaining)
+        else:
+            take=min(candidates,key=lambda i:abs(len(''.join(w['text'] for w in remaining[:i]).strip())-target))
+        pages.append(remaining[:take]);remaining=remaining[take:];count-=1
+
+
 starts=[]
 for phrase in ['Đang uống','Một số thuốc','Trên nhãn','Hai hộp','Quá liều','Ban đầu','Nếu cả hai','Nếu nghi','Đừng chờ']:
     index=script.index(phrase)
@@ -48,5 +65,7 @@ Path('src/medicine').mkdir(parents=True,exist_ok=True)
 Path('src/medicine/timing.json').write_text(json.dumps(timing,ensure_ascii=False,indent=2),encoding='utf-8')
 (OUT/'preflight.json').write_text(json.dumps(dict(font='Noto Sans VF OFL',NFC_NFD_glyphs='PASS',script_integrity='PASS',duration=duration,alignment='stable-ts small real audio',words=len(words)),ensure_ascii=False,indent=2))
 print(json.dumps(dict(duration=duration,starts=starts,pages=len(pages))))
+
+
 
 

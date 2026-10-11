@@ -14,10 +14,10 @@ export const MedicineSafetyV2:React.FC=()=>{
  const [handle]=useState(()=>delayRender('Load licensed Noto Sans variable font'));
  useEffect(()=>{const font=new FontFace('MedicineNoto','url('+staticFile('medicine/NotoSans-VF.ttf')+')',{weight:'100 900',style:'normal'});font.load().then(async f=>{document.fonts.add(f);await document.fonts.ready;continueRender(handle)}).catch(cancelRender)},[handle]);
  const ms=frame/fps*1000;
- const scene=Math.max(0,timing.sceneStarts.findLastIndex(s=>frame>=s));
+ const scene=Math.max(0,timing.sceneStarts.reduce((last,s,i)=>frame>=s?i:last,0));
  const local=frame-timing.sceneStarts[scene];
  const reveal=(at:number)=>interpolate(local,[at,at+8],[0,1],{extrapolateLeft:'clamp',extrapolateRight:'clamp'});
- const photoScene=[0,1,5,6,7,8].includes(scene);
+ const photoScene=[0,1,5,6,7,8].indexOf(scene)>=0;
  const photo=scene===6?'pharmacist.png':'compare.png';
  const page=timing.pages.find((p,i)=>ms>=p.startMs && ms<(timing.pages[i+1]?.startMs??p.endMs+700));
  return <AbsoluteFill style={{background:C.navy,color:C.white,fontFamily:'MedicineNoto',overflow:'hidden'}}>
@@ -54,4 +54,6 @@ export const MedicineSafetyV2:React.FC=()=>{
   </div>}
  </AbsoluteFill>
 };
+
+
 

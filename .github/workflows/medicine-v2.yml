@@ -1,0 +1,38 @@
+name: Medicine V2 production
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'remotion/src/medicine/**'
+      - 'remotion/public/medicine/**'
+      - 'remotion/scripts/medicine-*'
+      - '.github/workflows/medicine-v2.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  produce:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    defaults:
+      run:
+        working-directory: remotion
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - run: pip install torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+      - run: pip install stable-ts==2.19.1 fonttools pillow
+      - name: Align approved narration and check fonts
+        run: python scripts/medicine-align.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: medicine-alignment
+          path: |
+            remotion/src/medicine/timing.json
+            remotion/out/medicine/alignment.json
+            remotion/out/medicine/preflight.json
+          retention-days: 14
+

@@ -60,3 +60,29 @@ jobs:
           path: remotion/out/medicine
           retention-days: 14
 
+      - name: Render approved MP4 on GitHub
+        run: pnpm exec remotion render src/index.ts MedicineSafetyV2 out/medicine/ASF-20261011-001.mp4 --codec=h264 --audio-codec=aac --pixel-format=yuv420p --crf=18 --concurrency=2
+      - name: Decode entire MP4 and extract final frames
+        run: python scripts/medicine-verify.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ASF-20261011-001-MP4
+          path: |
+            remotion/out/medicine/ASF-20261011-001.mp4
+            remotion/out/medicine/metadata.json
+            remotion/out/medicine/qa-report.json
+          if-no-files-found: error
+          retention-days: 14
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ASF-20261011-001-QA
+          path: |
+            remotion/out/medicine/frames-final
+            remotion/out/medicine/contact-sheet.jpg
+            remotion/out/medicine/safe-zone-check.jpg
+            remotion/out/medicine/preflight.json
+            remotion/out/medicine/qa-samples.json
+            remotion/src/medicine/timing.json
+            remotion/src/medicine/visual-review.json
+          if-no-files-found: error
+          retention-days: 14

@@ -1,0 +1,15 @@
+{
+  "content_id": "ASF-20261011-001",
+  "preview_run": 38149291274,
+  "preview_commit": "14d1cf51d4cc22b0f0632008fedeaac7fb786a5a",
+  "representative_frames": 27,
+  "gate_A": "PASS narration-to-scene and FDA/NHS source map",
+  "gate_B": "PASS actual imagegen assets viewed; generic packaging, appropriate anatomy/contact",
+  "gate_C": "PASS nine scene states + transition contact sheet + fullsize equality/convergence/risk/urgent frames + longest-caption + simulated UI mask",
+  "glyph_issue_fixed": "Fullwidth equality replaced with ASCII; arrows rendered as SVG, complete code NFC/NFD preflight passed",
+  "font_weights": "400 source, 600 captions, 700 badges, 800 title seen on actual frames",
+  "caption_layout": "PASS max two visible lines, no clipping in representative samples",
+  "gate_D_playback": "NOT_RUN",
+  "gate_D_listening": "NOT_RUN",
+  "gate_E": "Partial QA with explicit playback/listening limits; not certified publish-ready"
+}

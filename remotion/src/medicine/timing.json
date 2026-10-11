@@ -745,7 +745,7 @@
   "pages": [
     {
       "startMs": 120,
-      "endMs": 1980,
+      "endMs": 1220,
       "words": [
         {
           "text": " Đang",
@@ -781,7 +781,13 @@
           "endMs": 1220,
           "timestampMs": 1080,
           "confidence": null
-        },
+        }
+      ]
+    },
+    {
+      "startMs": 1220,
+      "endMs": 2380,
+      "words": [
         {
           "text": " muốn",
           "startMs": 1220,
@@ -809,13 +815,7 @@
           "endMs": 1980,
           "timestampMs": 1890,
           "confidence": null
-        }
-      ]
-    },
-    {
-      "startMs": 1980,
-      "endMs": 2380,
-      "words": [
+        },
         {
           "text": " sốt?",
           "startMs": 1980,
@@ -923,7 +923,7 @@
     },
     {
       "startMs": 7500,
-      "endMs": 9780,
+      "endMs": 9000,
       "words": [
         {
           "text": " Trên",
@@ -966,7 +966,13 @@
           "endMs": 9000,
           "timestampMs": 8910,
           "confidence": null
-        },
+        }
+      ]
+    },
+    {
+      "startMs": 9000,
+      "endMs": 11360,
+      "words": [
         {
           "text": " thể",
           "startMs": 9000,
@@ -987,13 +993,7 @@
           "endMs": 9780,
           "timestampMs": 9640,
           "confidence": null
-        }
-      ]
-    },
-    {
-      "startMs": 9780,
-      "endMs": 11360,
-      "words": [
+        },
         {
           "text": " acetaminophen.",
           "startMs": 9780,
@@ -1005,7 +1005,7 @@
     },
     {
       "startMs": 11960,
-      "endMs": 14320,
+      "endMs": 13580,
       "words": [
         {
           "text": " Hai",
@@ -1055,7 +1055,13 @@
           "endMs": 13580,
           "timestampMs": 13500,
           "confidence": null
-        },
+        }
+      ]
+    },
+    {
+      "startMs": 13580,
+      "endMs": 14840,
+      "words": [
         {
           "text": " cộng",
           "startMs": 13580,
@@ -1076,13 +1082,7 @@
           "endMs": 14320,
           "timestampMs": 14230,
           "confidence": null
-        }
-      ]
-    },
-    {
-      "startMs": 14320,
-      "endMs": 14840,
-      "words": [
+        },
         {
           "text": " hoạt",
           "startMs": 14320,
@@ -1101,7 +1101,7 @@
     },
     {
       "startMs": 15520,
-      "endMs": 17880,
+      "endMs": 16800,
       "words": [
         {
           "text": " Quá",
@@ -1144,7 +1144,13 @@
           "endMs": 16800,
           "timestampMs": 16670,
           "confidence": null
-        },
+        }
+      ]
+    },
+    {
+      "startMs": 16800,
+      "endMs": 18980,
+      "words": [
         {
           "text": " thương",
           "startMs": 16800,
@@ -1165,13 +1171,7 @@
           "endMs": 17880,
           "timestampMs": 17780,
           "confidence": null
-        }
-      ]
-    },
-    {
-      "startMs": 17880,
-      "endMs": 18980,
-      "words": [
+        },
         {
           "text": " chí",
           "startMs": 17880,
@@ -1259,7 +1259,7 @@
     },
     {
       "startMs": 21820,
-      "endMs": 24620,
+      "endMs": 24200,
       "words": [
         {
           "text": " Nếu",
@@ -1302,7 +1302,13 @@
           "endMs": 24200,
           "timestampMs": 23510,
           "confidence": null
-        },
+        }
+      ]
+    },
+    {
+      "startMs": 24200,
+      "endMs": 25640,
+      "words": [
         {
           "text": " đừng",
           "startMs": 24200,
@@ -1316,13 +1322,7 @@
           "endMs": 24620,
           "timestampMs": 24500,
           "confidence": null
-        }
-      ]
-    },
-    {
-      "startMs": 24620,
-      "endMs": 25640,
-      "words": [
+        },
         {
           "text": " uống",
           "startMs": 24620,
@@ -1410,7 +1410,7 @@
     },
     {
       "startMs": 28640,
-      "endMs": 31720,
+      "endMs": 31040,
       "words": [
         {
           "text": " Nếu",
@@ -1474,7 +1474,13 @@
           "endMs": 31040,
           "timestampMs": 30960,
           "confidence": null
-        },
+        }
+      ]
+    },
+    {
+      "startMs": 31040,
+      "endMs": 33640,
+      "words": [
         {
           "text": " tế",
           "startMs": 31040,
@@ -1488,13 +1494,7 @@
           "endMs": 31720,
           "timestampMs": 31480,
           "confidence": null
-        }
-      ]
-    },
-    {
-      "startMs": 31960,
-      "endMs": 33640,
-      "words": [
+        },
         {
           "text": " mang",
           "startMs": 31960,

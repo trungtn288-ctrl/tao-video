@@ -1,8 +1,8 @@
 interface:
   display_name: Remotion Video V2
-  short_description: 'Video V2: hình thật, tự chọn giọng và font tiếng Việt'
+  short_description: 'Video V2: hình thật, giọng Việt diễn cảm và nhấn nhá'
   default_prompt: Dùng $remotion-video-v2 dựng video từ lời thoại đã duyệt, áp dụng
-    chuẩn hình ảnh26, ưu tiên giọng Việt ElevenLabs rồi HeyGen và font tiếng Việt, giữ nguyên nội dung
+    chuẩn hình ảnh26, ưu tiên giọng Việt ElevenLabs rồi HeyGen kịch tính, có cảm xúc, nhịp nhanh và nhấn nhá, font tiếng Việt, giữ nguyên nội dung
     và xuất MP4.
   icon_small: assets/icon.svg
   icon_large: assets/icon.svg

@@ -16,6 +16,7 @@ Yêu cầu mẫu: “Tạo video theo Remotion V2 với script đính kèm. Gi�
 - Thiết kế premium, rõ ràng, có hoạt cảnh gắn với nội dung. Không cần chuyển động thực của nhân vật mặc định.
 - Tự chọn font tiếng Việt theo [quy tắc font](font-selection.md). Giữ font hiện tại nếu đạt; khi thiếu tự chọn font hợp lệ khác và kiểm wrapping/safe zone, không hỏi lại.
 - Khung video dọc1080×1920,30fps. Đầu ra MP4 H.264/AAC khi người dùng yêu cầu render.
+- Không in câu lệnh/DAILY/KEYWORD/TREND/keyword đầu vào thành banner hoặc tên kênh. Chỉ hiện tiêu đề nội dung, nhãn có ích; series/thương hiệu phải do người dùng xác định hoặc yêu cầu.
 - Tiêu đề, phụ đề, số liệu, nguồn và CTA tránh UI TikTok. Nền và trang trí phủ toàn màn hình.
 - Audio mới ưu tiên ElevenLabs tiếng Việt, rồi HeyGen tiếng Việt theo [voice-routing.md](voice-routing.md); không tự mua credits/gói, dùng API key riêng hoặc dùng dịch vụ khác. Dựng, render và kiểm khung bằng GitHub Actions tại repository trungtn288-ctrl/tao-video, thư mục remotion theo [quy trình](github-actions.md). Không mở Studio hoặc render local trừ khi người dùng yêu cầu rõ ràng.
 
@@ -45,7 +46,7 @@ Mục tiêu thay đổi thông tin hoặc bố cục có ý nghĩa khoảng2–3
 
 ## Voice, nhạc và SFX
 
-Audio mới ưu tiên ElevenLabs Việt, sau đó HeyGen Việt theo [thứ tự provider](voice-routing.md). Giọng vi-VN-HoaiMyNeural là lựa chọn cũ đã test, chỉ dùng Edge TTS khi người dùng chọn và cho phép gửi script. Không tự fallback khi HeyGen thiếu capability. Ưu tiên audio đã duyệt khi chỉ sửa hình. Tốc độ tùy script, giọng tự nhiên, rõ, ít nghỉ thừa. Không khóa cấu hình tăng tốc của R4 cho mọi video mới.
+Audio mới ưu tiên ElevenLabs Việt, sau đó HeyGen Việt theo [thứ tự provider](voice-routing.md). Áp dụng bắt buộc [diễn xuất và QA giọng đọc](voice-performance.md): kịch tính, hấp dẫn, có năng lượng/cảm xúc, nhịp nhanh và nhấn nhá phù hợp từng ý; không đọc chậm, đều, ru ngủ làm mặc định. Giữ audio đã duyệt khi chỉ sửa hình. Lập delivery plan trước TTS, giữ nguyên lời thoại, căn timing theo audio thật; không khóa tốc độ R4 hoặc dùng tăng tốc đơn thuần để thay diễn xuất.
 
 Nhạc nhẹ dưới voice, có đường cường độ theo nội dung. SFX ngắn ở điểm cảnh báo, xác nhận hoặc chuyển ý. Kiểm tra bằng nghe toàn bộ, không chỉ đo đỉnh âm lượng. Kết quả R4Plus tham chiếu: mean -22,1dBFS,peak -6,4dBFS, không phải chuẩn âm lượng bắt buộc cho mọi video.
 
@@ -59,7 +60,7 @@ Nguồn đi cùng thông tin có thể kiểm chứng. Số liệu có đủ ý 
 
 1. Đọc phiên bản chuẩn và script mới. Chỉ đọc03_PROGRESS.md nếu file có trong dự án hiện tại. Xác định script đã khóa hay còn được sửa.
 2. Kiểm tra nguồn, chia cảnh theo nghĩa và lập visual theo nhịp voice.
-3. Tạo/reuse voice trong phạm vi cho phép, căn phụ đề và timing.
+3. Lập VOICE_DELIVERY_PLAN, tạo/reuse voice trong phạm vi cho phép, kiểm theo voice-performance.md, căn phụ đề và timing.
 4. Dựng theo V2, xem preview và khung đại diện đủ mọi cảnh.
 5. Kiểm tra góc zoom, chuyển bố cục, counter, chữ dài và lớpUI mô phỏng.
 6. Render MP4 khi người dùng yêu cầu. Kiểm tra1080×1920,30fps,khung hình,duration,audio,giải mã toàn bộ.
@@ -70,7 +71,7 @@ Technical success, content success và business success là ba đánh giá riên
 
 ## Phiên bản chuẩn và revision video
 
-Skill hiện hành là remotion-video-v2, revision 2026-10-11-elevenlabs-fonts. Người dùng yêu cầu nâng cấp V2 từ gói V1 mới; không tạo skill V3. Giữ bản V2 trước cập nhật trong baseline-v2-20261010/ và baseline V1 của đầu vào trong baseline-20261010/. Các bản này chỉ để đối chiếu, không điều khiển runtime.
+Skill hiện hành là remotion-video-v2, revision 2026-10-11-expressive-voice. Người dùng yêu cầu nâng cấp V2 từ gói V1 mới; không tạo skill V3. Giữ bản V2 trước cập nhật trong baseline-v2-20261010/ và baseline V1 của đầu vào trong baseline-20261010/. Các bản này chỉ để đối chiếu, không điều khiển runtime.
 
 Thay script hoặc sửa một video không tự tăng phiên bản chuẩn. Ví dụ: Topic_V2_r01.mp4 và Topic_V2_r02.mp4. Đọc [changelog](changelog.md); chỉ tạo V3 khi người dùng yêu cầu hoặc xác nhận.
 

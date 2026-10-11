@@ -32,3 +32,12 @@
 - assets1.zip mới bổ sung 12 ảnh WebP 01–12, giữ nguyên byte trong assets/visual-reference-26/.
 - Catalog và inventory hiện có đủ 26 ảnh INCLUDED, không còn đường dẫn ảnh thiếu.
 - Giải mã 12 ảnh mới và đối chiếu số mục bằng contact sheet. Giữ nguyên chuẩn, voice, font và quy trình; không tuyên bố đã QA video.
+
+## V2 revision 2026-10-11-expressive-voice — 11/10/2026
+
+- Người dùng yêu cầu nâng cấp skill cho mọi video sau, không sửa video đang xem. Giữ tên V2 và chuẩn hình đã duyệt.
+- Thêm voice-performance.md: delivery plan trước TTS; chọn giọng Việt có năng lượng/diễn cảm; mở nhanh, nhịp gọn, biến đổi cảm xúc và nhấn đúng ý, cao trào phù hợp nội dung.
+- QA phải nghe narration và mix thực tế, ghi timestamp/evidence cho năng lượng, cảm xúc, nhấn nhá, nhịp, clarity/integrity và sync; không dùng tăng tốc, tags hoặc render success làm bằng chứng PASS.
+- Không tự in câu lệnh DAILY/KEYWORD/TREND/keyword thành banner hoặc branding.
+- Đồng bộ entrypoint, routing, standard, metadata và repo instructions. Bản trước cập nhật giữ trong Git history.
+- Chỉ kiểm cấu trúc/liên kết và nội dung hướng dẫn; không tạo speech hoặc render lại video cho lần nâng cấp skill này.

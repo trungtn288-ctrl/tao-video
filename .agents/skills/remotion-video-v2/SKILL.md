@@ -1,16 +1,16 @@
 ---
 name: remotion-video-v2
-description: "Tạo và chỉnh video faceless bằng Remotion theo chuẩn V2 của AI Faceless Video Factory: hình ảnh giống thật theo 26 mục đã duyệt, tạo ảnh bằng imagegen, tự chọn giọng Việt ElevenLabs → HeyGen và font tiếng Việt, phụ đề đồng bộ và vùng tránh UI TikTok. Dùng khi gọi Remotion Video V2 hoặc yêu cầu dựng video theo chuẩn này."
+description: "Tạo và chỉnh video faceless bằng Remotion theo chuẩn V2 của AI Faceless Video Factory: hình ảnh giống thật theo 26 mục đã duyệt, tạo ảnh bằng imagegen, tự chọn giọng Việt ElevenLabs → HeyGen diễn cảm, nhịp nhanh và nhấn nhá, font tiếng Việt, phụ đề đồng bộ và vùng tránh UI TikTok. Dùng khi gọi Remotion Video V2 hoặc yêu cầu dựng video theo chuẩn này."
 ---
 
 # Remotion Video V2
 
-Nâng cấp V2 ngày 11/10/2026 từ SKILL.zip và assets1.zip do người dùng cung cấp: chuẩn hình ảnh 26 mục, prompt và quy trình imagegen, tự chọn giọng Việt ElevenLabs → HeyGen và font tiếng Việt. Giữ tên skill V2; revision hướng dẫn `2026-10-11-elevenlabs-fonts`. Giữ bản cũ để đối chiếu trong [baseline](references/baseline-20261010/original-skill.md). Bản V2 trước cập nhật được giữ trong references/baseline-v2-20261010/. Các bản baseline chỉ là lịch sử, không là hướng dẫn runtime. Đọc [changelog](references/changelog.md).
+Nâng cấp V2 ngày 11/10/2026 từ SKILL.zip và assets1.zip do người dùng cung cấp: chuẩn hình ảnh 26 mục, prompt và quy trình imagegen, tự chọn giọng Việt ElevenLabs → HeyGen và font tiếng Việt. Giữ tên skill V2; revision hướng dẫn `2026-10-11-expressive-voice`. Giữ bản cũ để đối chiếu trong [baseline](references/baseline-20261010/original-skill.md). Bản V2 trước cập nhật được giữ trong references/baseline-v2-20261010/. Các bản baseline chỉ là lịch sử, không là hướng dẫn runtime. Đọc [changelog](references/changelog.md).
 
 ## Đọc bắt buộc trước sản xuất
 
 1. Đọc [chuẩn dựng V2](references/standard-v2.md) và [chuẩn hình ảnh đầy đủ 26 mục](references/visual-standard-26.md).
-2. Đọc [tạo hình và prompt](references/image-generation.md), [thứ tự giọng Việt](references/voice-routing.md), [HeyGen dự phòng](references/heygen-voice.md), [tự chọn font](references/font-selection.md), [Cloud runtime](references/cloud-runtime.md).
+2. Đọc [tạo hình và prompt](references/image-generation.md), [thứ tự giọng Việt](references/voice-routing.md), [diễn xuất và QA giọng đọc](references/voice-performance.md), [HeyGen dự phòng](references/heygen-voice.md), [tự chọn font](references/font-selection.md), [Cloud runtime](references/cloud-runtime.md).
 3. Đọc Project Sources liên quan theo quy tắc dự án nếu đang thực hiện nhiệm vụ của AI Script Factory. Không dùng tài liệu skill hoặc Library để thay Project Sources. Không sửa các nguồn của dự án trong nhiệm vụ sản xuất.
 
 Đọc [đúng đối tượng được nêu đích danh](references/named-subjects.md) khi script có tên riêng; ưu tiên hình thực tế đã xác minh trên mạng, hoặc tạo hình giữ đúng nhận diện. Khi dựng/render, áp dụng [GitHub Actions](references/github-actions.md); không render local hoặc mở Studio trừ khi người dùng yêu cầu rõ ràng.
@@ -23,12 +23,14 @@ Nâng cấp V2 ngày 11/10/2026 từ SKILL.zip và assets1.zip do người dùng
 - Chọn ảnh và sửa lỗi tài nguyên nội bộ trong phạm vi đã cho phép; không yêu cầu duyệt từng cảnh. Kiểm kết quả thật, không coi prompt hay ảnh đẹp đơn lẻ là QA video PASS.
 - Audio mới ưu tiên ElevenLabs tiếng Việt, tiếp theo HeyGen tiếng Việt theo voice-routing.md; tự chọn giọng tương thích, không hỏi lại việc chuyển dự phòng đã được giao. Tái dùng audio đã duyệt khi chỉ sửa hình. Không tự mua credits hoặc clone giọng.
 - Tự chọn font tiếng Việt hợp lệ đang có; kiểm glyph, dấu, wrapping, safe zone và render. Không yêu cầu xác nhận Segoe UI/DejaVu Sans/Noto Sans cho lựa chọn thông thường.
+- Mọi video mới mặc định giọng kịch tính, hấp dẫn, có năng lượng/cảm xúc, nhịp nhanh và nhấn nhá theo [voice-performance.md](references/voice-performance.md). Lập delivery plan trước TTS và kiểm audio thật; tăng tốc đơn thuần không đủ. Cập nhật skill không tự sửa/render lại video cũ hoặc tạo voice thử.
+- Không đưa câu lệnh, DAILY/KEYWORD/TREND hoặc keyword đầu vào lên màn hình như banner/branding; chỉ dùng tiêu đề nội dung hoặc nhãn có ích cho người xem. Tên series/thương hiệu chỉ hiện khi người dùng đã xác định hoặc yêu cầu.
 - Không mặc định gọi giọng là “phổ biến nhất” khi không có số liệu xếp hạng. Ưu tiên giọng phù hợp, rõ và tự nhiên; giữ nhất quán trong video.
 - Xuất dọc 1080×1920, 30fps, H.264/AAC theo yêu cầu render. Giữ palette và hình học safe zone V2, điều chỉnh trong phạm vi bố cục để ảnh chính hấp dẫn và chữ đọc được. Không đóng khung chủ đề ngân hàng hoặc số cảnh/thời lượng R4.
 
 ## Thực hiện đến kết quả
 
-Nhận script đã khóa → kiểm runtime → lập bảng lời/cảnh/đối tượng/hành động/nguồn/tính xác thực → chọn giọng và font → tạo/reuse audio → lập timing thực → chọn/tạo tài nguyên theo chuẩn26 → kiểm tài nguyên → dựng Remotion → xem đủ cảnh và mốc tương tác/zoom/UI mô phỏng → render → giải mã toàn file → nghe/xem thực tế khi có capability → sửa lỗi trong phạm vi → báo kết quả đúng bằng chứng.
+Nhận script đã khóa → kiểm runtime → lập bảng lời/cảnh/đối tượng/hành động/nguồn/tính xác thực → chọn giọng và font → lập VOICE_DELIVERY_PLAN → tạo/reuse audio → lập timing thực → chọn/tạo tài nguyên theo chuẩn26 → kiểm tài nguyên → dựng Remotion → xem đủ cảnh và mốc tương tác/zoom/UI mô phỏng → render → giải mã toàn file → nghe/xem thực tế khi có capability → sửa lỗi trong phạm vi → báo kết quả đúng bằng chứng.
 
 Prompt và đường dẫn ảnh lịch sử nằm trong [danh mục 26 mẫu](references/image-prompts-26.json); Đã đóng gói đủ 26 ảnh mẫu: 01–12 từ assets1.zip mới và 13–26 từ assets2.zip. Đọc [tài nguyên đi kèm](references/asset-inventory.md); không giả đã xem hoặc tái tạo đúng ảnh mẫu gốc. Mẫu ảnh ngang có tiêu đề là tài liệu tham chiếu; video sản xuất phải tạo ảnh theo khung dọc và chèn chữ bằng Remotion. Không đưa nguyên banner “MINH HỌA CHUẨN HÌNH ẢNH” vào mọi video.
 

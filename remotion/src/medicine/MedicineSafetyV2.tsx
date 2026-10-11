@@ -34,7 +34,7 @@ export const MedicineSafetyV2:React.FC=()=>{
    </div>}
    {scene===0&&<div style={{...box,marginTop:24,opacity:reveal(65),fontSize:40,fontWeight:700}}>Kiểm tra thành phần trước.</div>}
    {scene===1&&<div style={{...box,marginTop:25,fontSize:32,opacity:reveal(20)}}><div style={{fontSize:23,letterSpacing:2,marginBottom:8}}>VÍ DỤ THÀNH PHẦN CẦN TÌM</div><strong style={{fontSize:48}}>paracetamol</strong><div style={{marginTop:9}}>Một số thuốc cảm đã có.</div></div>}
-   {scene===2&&<div style={{...box,marginTop:70,textAlign:'center',padding:'60px 30px'}}><div style={{fontSize:61,fontWeight:800}}>paracetamol</div><div style={{fontSize:72,color:C.ink,opacity:reveal(12),margin:'28px 0'}}>＝</div><div style={{fontSize:57,fontWeight:800,opacity:reveal(20)}}>acetaminophen</div><div style={{marginTop:55,fontSize:32,opacity:reveal(45)}}>Hai tên gọi · cùng hoạt chất</div></div>}
+   {scene===2&&<div style={{...box,marginTop:70,textAlign:'center',padding:'60px 30px'}}><div style={{fontSize:61,fontWeight:800}}>paracetamol</div><div style={{fontSize:72,color:C.ink,opacity:reveal(12),margin:'28px 0'}}>=</div><div style={{fontSize:57,fontWeight:800,opacity:reveal(20)}}>acetaminophen</div><div style={{marginTop:55,fontSize:32,opacity:reveal(45)}}>Hai tên gọi · cùng hoạt chất</div></div>}
    {scene===3&&<div style={{marginTop:50}}><div style={{display:'flex',gap:24}}>
     <div style={{...box,flex:1,borderTop:'12px solid '+C.cyan}}><div style={{fontSize:26}}>NHÃN A · MINH HỌA</div><strong style={{fontSize:34}}>paracetamol</strong></div>
     <div style={{...box,flex:1,borderTop:'12px solid '+C.amber,opacity:reveal(15)}}><div style={{fontSize:26}}>NHÃN B · MINH HỌA</div><strong style={{fontSize:34}}>paracetamol</strong></div></div>
@@ -54,6 +54,7 @@ export const MedicineSafetyV2:React.FC=()=>{
   </div>}
  </AbsoluteFill>
 };
+
 
 
 

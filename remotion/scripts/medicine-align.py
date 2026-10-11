@@ -11,6 +11,7 @@ font=TTFont(P/'NotoSans-VF.ttf')
 cmap=font.getBestCmap()
 extra="Tiếng Việt: Ă Â Đ Ê Ô Ơ Ư ă â đ ê ô ơ ư; Nguyễn, bảo quản, tủ lạnh, sức khỏe; ắ ằ ẳ ẵ ặ ấ ầ ẩ ẫ ậ ế ề ể ễ ệ ố ồ ổ ỗ ộ ớ ờ ở ỡ ợ ứ ừ ử ữ ự"
 texts=script+extra+"CÙNG HOẠT CHẤT KHÁC TÊN Kiểm tra thành phần Hỏi dược sĩ Đến cơ sở y tế ngay Đừng chờ triệu chứng Nguồn FDA NHS Minh họa AI paracetamol acetaminophen"
+texts+=Path('src/medicine/MedicineSafetyV2.tsx').read_text(encoding='utf-8-sig')
 missing=sorted(set(c for form in ['NFC','NFD'] for c in unicodedata.normalize(form,texts) if not c.isspace() and ord(c) not in cmap))
 assert not missing,missing
 duration=float(subprocess.check_output(['ffprobe','-v','error','-show_entries','format=duration','-of','csv=p=0',str(P/'narration.mp3')]))
@@ -68,6 +69,7 @@ Path('src/medicine').mkdir(parents=True,exist_ok=True)
 Path('src/medicine/timing.json').write_text(json.dumps(timing,ensure_ascii=False,indent=2),encoding='utf-8')
 (OUT/'preflight.json').write_text(json.dumps(dict(font='Noto Sans VF OFL',NFC_NFD_glyphs='PASS',script_integrity='PASS',duration=duration,alignment='stable-ts small real audio',words=len(words)),ensure_ascii=False,indent=2))
 print(json.dumps(dict(duration=duration,starts=starts,pages=len(pages))))
+
 
 
 

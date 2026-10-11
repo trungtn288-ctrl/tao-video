@@ -1,42 +1,43 @@
 ---
 name: remotion-video-v2
-description: "Tạo hoặc chỉnh video faceless bằng Remotion theo chuẩn V2 của AI Faceless Video Factory, kế thừa R3/R4Plus với lồng tiếng HeyGen, hoạt cảnh sinh động, phụ đề Việt và bố cục tránh giao diện TikTok. Dùng khi người dùng gọi Remotion V2 hoặc muốn video theo chuẩn này."
+description: "Tạo và chỉnh video faceless bằng Remotion theo chuẩn V2 của AI Faceless Video Factory: hình ảnh giống thật theo 26 mục đã duyệt, tạo ảnh bằng imagegen, tự chọn giọng Việt ElevenLabs → HeyGen và font tiếng Việt, phụ đề đồng bộ và vùng tránh UI TikTok. Dùng khi gọi Remotion Video V2 hoặc yêu cầu dựng video theo chuẩn này."
 ---
 
 # Remotion Video V2
 
-Chuẩn sản xuất do người dùng xác nhận ngày09/10/2026. Khi áp dụng, đọc [chuẩn V2](references/standard-v2.md). Đây là chuẩn video, không phải yêu cầu tạo PowerPoint.
+Nâng cấp V2 ngày 11/10/2026 từ SKILL.zip và assets1.zip do người dùng cung cấp: chuẩn hình ảnh 26 mục, prompt và quy trình imagegen, tự chọn giọng Việt ElevenLabs → HeyGen và font tiếng Việt. Giữ tên skill V2; revision hướng dẫn `2026-10-11-elevenlabs-fonts`. Giữ bản cũ để đối chiếu trong [baseline](references/baseline-20261010/original-skill.md). Bản V2 trước cập nhật được giữ trong references/baseline-v2-20261010/. Các bản baseline chỉ là lịch sử, không là hướng dẫn runtime. Đọc [changelog](references/changelog.md).
 
-Trước khi dựng trong Cloud, đọc [khả năng môi trường](references/cloud-runtime.md). Skill lưu hướng dẫn sản xuất, không tự cung cấp renderer hoặc tài nguyên của video khác. Các hình trong assets là tham chiếu bố cục, không phải script mới hay dữ liệu cần sao chép.
+## Đọc bắt buộc trước sản xuất
 
-## Quyết định chính
+1. Đọc [chuẩn dựng V2](references/standard-v2.md) và [chuẩn hình ảnh đầy đủ 26 mục](references/visual-standard-26.md).
+2. Đọc [tạo hình và prompt](references/image-generation.md), [thứ tự giọng Việt](references/voice-routing.md), [HeyGen dự phòng](references/heygen-voice.md), [tự chọn font](references/font-selection.md), [Cloud runtime](references/cloud-runtime.md).
+3. Đọc Project Sources liên quan theo quy tắc dự án nếu đang thực hiện nhiệm vụ của AI Script Factory. Không dùng tài liệu skill hoặc Library để thay Project Sources. Không sửa các nguồn của dự án trong nhiệm vụ sản xuất.
 
-- Giữ nguyên100% script đã khóa. Phân cảnh và thời lượng theo script/voice mới, không mặc định9cảnh hoặc68giây như ví dụ R4.
-- Knowledge Motion Design premium: sinh động, cao trào rõ, vẫn dễ đọc. Màu nền navy/kem thay theo ý nghĩa nội dung. Segoe UI, phụ đề42px tô sáng từ đang đọc.
-- Xuất dọc1080×1920,30fps khi người dùng yêu cầu render. Tiêu đề, số liệu, nguồn, phụ đề và CTA tránh thanh tìm kiếm trên, thông tin kênh/mô tả dưới và nút bên phải TikTok. Nền phủ toàn khung.
-- Mockup thao tác, counter có nguồn, sơ đồ động, checklist và zoom theo lời đọc. Không cần nhân vật chuyển động mặc định.
-- Audio mới mặc định dùng HeyGen speech qua plugin kết nối; đọc [quy trình lồng tiếng HeyGen](references/heygen-voice.md). Tái sử dụng audio đã duyệt khi chỉ sửa hình. Hoài My/Edge TTS là lựa chọn cũ, chỉ dùng khi người dùng chọn; không tự fallback. Skill không cấp quyền mua dịch vụ hoặc clone giọng.
-- HeyGen speech được dùng trong yêu cầu tạo lồng tiếng/video đã được cho phép; không tự mua credits/gói dịch vụ, dùng API key riêng hoặc dùng dịch vụ khác. Trong repo này, dùng GitHub theo AGENTS.md của dự án; render và kiểm tra khung hình trên GitHub Actions.
-- Tôn trọng roadmap MPT và read-only sources của dự án nếu có. Remotion là nhiệm vụ sản xuất riêng theo yêu cầu người dùng.
+Đọc [đúng đối tượng được nêu đích danh](references/named-subjects.md) khi script có tên riêng; ưu tiên hình thực tế đã xác minh trên mạng, hoặc tạo hình giữ đúng nhận diện. Khi dựng/render, áp dụng [GitHub Actions](references/github-actions.md); không render local hoặc mở Studio trừ khi người dùng yêu cầu rõ ràng.
 
-## Thực hiện
+## Quyết định mặc định
 
-Đọc script, xác định phần đã khóa và nguồn dữ liệu. Nếu thiếu script thì hỏi người dùng cung cấp, không lấy lại script SIMO làm nội dung mới. Lập visual/timing theo voice rồi dựng theo chuẩn. Dùng các skill Remotion có sẵn nếu môi trường cung cấp, không giả định có plugin hoặc Node/renderer trong mọi môi trường.
+- Giữ nguyên 100% lời thoại đã duyệt; không rút gọn, thay claim, certainty, lợi ích hoặc payoff. Thiếu lời thoại cần hỏi lấy nội dung; duyệt skill không là duyệt một script mới.
+- Dùng hình thật hoặc ảnh AI như ảnh chụp cho người, con vật, thực phẩm, đồ vật, bếp, kho và cảnh đời thực. Không dùng hình khối/SVG sơ sài thay tài nguyên chính. Dùng mã/vector cho chữ, sơ đồ, bảng, biểu đồ, bản đồ và giao diện cần chính xác.
+- Dùng skill imagegen hiện có và công cụ tạo ảnh tích hợp để tạo bitmap. Skill này chứa các quy tắc cốt lõi để triển khai; không yêu cầu người dùng gọi imagegen riêng. Không tự chuyển sang API/CLI có key, mua tài nguyên, hoặc đổi provider khi công cụ không khả dụng.
+- Chọn ảnh và sửa lỗi tài nguyên nội bộ trong phạm vi đã cho phép; không yêu cầu duyệt từng cảnh. Kiểm kết quả thật, không coi prompt hay ảnh đẹp đơn lẻ là QA video PASS.
+- Audio mới ưu tiên ElevenLabs tiếng Việt, tiếp theo HeyGen tiếng Việt theo voice-routing.md; tự chọn giọng tương thích, không hỏi lại việc chuyển dự phòng đã được giao. Tái dùng audio đã duyệt khi chỉ sửa hình. Không tự mua credits hoặc clone giọng.
+- Tự chọn font tiếng Việt hợp lệ đang có; kiểm glyph, dấu, wrapping, safe zone và render. Không yêu cầu xác nhận Segoe UI/DejaVu Sans/Noto Sans cho lựa chọn thông thường.
+- Không mặc định gọi giọng là “phổ biến nhất” khi không có số liệu xếp hạng. Ưu tiên giọng phù hợp, rõ và tự nhiên; giữ nhất quán trong video.
+- Xuất dọc 1080×1920, 30fps, H.264/AAC theo yêu cầu render. Giữ palette và hình học safe zone V2, điều chỉnh trong phạm vi bố cục để ảnh chính hấp dẫn và chữ đọc được. Không đóng khung chủ đề ngân hàng hoặc số cảnh/thời lượng R4.
 
-Nếu đang ở dự án gốc, đọc03_PROGRESS.md để tránh làm lại việc đã xong. Có thể tham khảo r4-video/src-safe và video R4Plus TikTokSafe nếu các file thực sự hiện diện. Ở dự án khác, áp dụng hướng dẫn trong skill, không phụ thuộc đường dẫnC: hoặc yêu cầu người dùng có video R4.
+## Thực hiện đến kết quả
 
-Kiểm tra nguyên văn script/captions, đủ cảnh, góc zoom và mốc chuyển bố cục. Chồng UI mô phỏng để kiểm tra rồi bỏ lớp này khi xuất. Giải mã toàn MP4, kiểm tra định dạng và nghe/xem toàn bộ. Báo chính xác bước chưa thực hiện. Mốc vùng tránh theo ảnh người dùng, cần đăng nháp để kiểm tra thiết bị thực tế.
+Nhận script đã khóa → kiểm runtime → lập bảng lời/cảnh/đối tượng/hành động/nguồn/tính xác thực → chọn giọng và font → tạo/reuse audio → lập timing thực → chọn/tạo tài nguyên theo chuẩn26 → kiểm tài nguyên → dựng Remotion → xem đủ cảnh và mốc tương tác/zoom/UI mô phỏng → render → giải mã toàn file → nghe/xem thực tế khi có capability → sửa lỗi trong phạm vi → báo kết quả đúng bằng chứng.
 
-Nếu runtime không hỗ trợ render, giữ mã nguồn/tài nguyên và nêu đúng giới hạn. Không gọi tài liệu hoặc preview là videoMP4 đã render.
+Prompt và đường dẫn ảnh lịch sử nằm trong [danh mục 26 mẫu](references/image-prompts-26.json); 26 ảnh mẫu không có trong các ZIP này. Đọc [tài nguyên đi kèm](references/asset-inventory.md); không giả đã xem hoặc tái tạo đúng ảnh mẫu gốc. Mẫu ảnh ngang có tiêu đề là tài liệu tham chiếu; video sản xuất phải tạo ảnh theo khung dọc và chèn chữ bằng Remotion. Không đưa nguyên banner “MINH HỌA CHUẨN HÌNH ẢNH” vào mọi video.
 
-## Phiên bản
+Lưu script, audio, voice metadata, prompt gốc và các chỉnh sửa, tài nguyên, nguồn/quyền, timeline, font path, mã nguồn, khung QA, MP4, metadata và báo cáo trong task. Chỉ sửa file tiến độ nếu hiện diện và được phép. Không tự đăng video.
 
-Remotion Video V2 được tạo ngày 10/10/2026 theo yêu cầu người dùng từ ZIP remotion-video-v1.zip và lưu trong Git để các phiên Cloud của repo đọc được. V2 kế thừa toàn bộ chuẩn hình, safe zone, phụ đề và HeyGen voice của V1; chưa có thay đổi chất lượng sản xuất hoặc kết quả test voice mới.
+## Hoàn tất và giới hạn
 
-Đọc [changelog](references/changelog.md). Các lần sửa video không tự tăng phiên bản chuẩn. Chỉ tạo V3 khi người dùng yêu cầu hoặc xác nhận nâng chuẩn; không ghi đè skill V1 nếu có.
+Ghi PASS/FAIL/NOT_RUN/UNAVAILABLE cùng bằng chứng cho kiểm ảnh, chữ/dấu, sync, giải mã, xem video và nghe audio. Thiếu khả năng xem/nghe ghi rõ; không gọi render thành công là publish-ready. Không có renderer hoặc image tool thì báo blocker đúng, giữ tài nguyên/mã đã làm; không bù bằng hình sơ sài.
 
-## Ví dụ gọi
+Không hỏi lại việc chọn hình, giọng và font đã được giao. Chỉ hỏi khi thiếu nội dung bắt buộc, quyết định thật về chi phí/quyền/đổi phương pháp, hoặc thay lời đã khóa. Giữ các phiên bản chuẩn sau này theo quyết định người dùng; lỗi tài nguyên một clip không tự tạo V3.
 
-“Dùng $remotion-video-v2 tạo video với script đính kèm, giữ nguyên lời thoại và renderMP4.”
-
-“Dùng $remotion-video-v2 kiểm tra bố cục TikTok cho video hiện tại.”
+Ví dụ: “Dùng $remotion-video-v2 dựng video từ lời thoại đã duyệt, giữ nguyên nội dung và xuất MP4.”

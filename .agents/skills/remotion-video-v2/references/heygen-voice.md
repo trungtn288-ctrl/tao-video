@@ -1,3 +1,5 @@
+Quy tắc hiện hành: [voice-routing.md](voice-routing.md) — ElevenLabs Việt trước, HeyGen Việt sau; thay mặc định chỉ HeyGen và quy tắc cấm chuyển giữa hai provider trong tài liệu cũ.
+
 # Lồng tiếng HeyGen cho Remotion V2
 
 Provider update được người dùng yêu cầu ngày 10/10/2026. HeyGen tạo audio; Remotion vẫn dựng hoạt cảnh, phụ đề, mix và render. Không dùng Video Agent/avatar/digital twin để tạo voice-only. Không clone giọng, mua credits hoặc thay tài khoản.
@@ -10,7 +12,7 @@ Yêu cầu cập nhật skill không tự là lệnh tạo audio test. Khi ngư�
 
 - Khám phá tool HeyGen hiện có và đọc schema thực tế; dùng heygen:heygen-workflows nếu khả dụng. Không giả tên endpoint hoặc voice ID.
 - Nếu user muốn tự chọn, dùng choose_voice. Nếu user giao chọn giọng, dùng list_voices với engine=starfish, language/locale Việt và preference phù hợp; chọn ID trả về có xác nhận speech compatibility. Không hard-code Hoài My thành HeyGen voice ID.
-- Nếu chưa có giọng và user chưa giao chọn, mở chooser Việt để chọn giọng. Giữ voice ID đã chọn trong task; không chọn lại khi chỉ sửa hình.
+- User đã giao tự chọn giọng khi dùng skill này. Nếu chưa có giọng, dùng list_voices lọc Việt + engine tương thích; chọn một giọng phù hợp và tiếp tục không mở chooser. Giữ voice ID/name trong task; không chọn lại khi chỉ sửa hình. Giọng “Gail in car” từng được user chọn: 0214ac51f93e420f8711d568dcfbc50e, chỉ dùng lại cho audio mới sau khi metadata hiện tại xác nhận hỗ trợ; không hard-code ID này cho mọi video.
 - Kiểm tra metadata available_engines; nếu kết quả chỉ orca hoặc mâu thuẫn filter starfish, không dùng ID đó cho create_speech. Có thể đọc một trang tiếp theo để xác minh; chưa có giọng tương thích thì báo blocker hoặc cho user chọn. Không tự đổi engine ngoài schema.
 - Dùng create_speech đúng một lần cho script/giọng đã thống nhất. Schema hiện tại: text 1–5000 ký tự; inputType=text mặc định; voiceId; speed 0.5–2.0; language/locale theo support thực tế. Không truyền engine vào create_speech nếu schema không có field đó.
 - Mặc định text nguyên văn và speed 1.0; nhịp rõ, tự nhiên, ít nghỉ thừa. Tốc độ khác theo yêu cầu/giọng; không coi tăng speed là thay thế diễn cảm. SSML chỉ khi cần và có support, break theo giây (ví dụ 0.35s), không millisecond; giữ nguyên từ/nghĩa script.
@@ -32,3 +34,23 @@ Audio là narration track của Remotion, không thay đổi style/safe zones V2
 Phân biệt skill đã cập nhật, voice đã tạo, asset đã tải, timestamps đã align, video đã render và đã nghe/xem. Audio generation success không tự chứng minh phát âm hay diễn cảm tốt. Nghe toàn audio khi capability có; kiểm tra chữ Việt/tên riêng/số, đủ script, khoảng nghỉ, clipping, tốc độ và sync. Chưa nghe thì ghi NOT_RUN, nhờ user test, không báo voice QA PASS.
 
 Khi test thấy sai phát âm/nhịp, giữ log và chỉ tạo lại theo yêu cầu user; không tự sửa script đã khóa. Không gọi HeyGen video generation chỉ để lấy audio.
+
+## Tự chọn đã được giao
+
+Ưu tiên theo thứ tự: audio đã duyệt cho tác vụ sửa hình → giọng user chỉ định cho video này nếu còn tương thích → giọng đang dùng của kênh nếu có metadata hợp lệ → giọng public hỗ trợ tiếng Việt, speech-compatible và hợp tone nội dung.
+
+Khám phá bằng list_voices thay chooser. Lọc language/locale theo schema đang có, public, engine starfish nếu endpoint cần. Chọn giọng rõ, tự nhiên, dễ nghe, nhịp phù hợp; không mặc định nam/nữ theo chủ đề. Khi có popularity/ranking đáng tin cậy từ nhà cung cấp, có thể ưu tiên giữa các giọng phù hợp. Không có dữ liệu popularity thì ghi `POPULARITY_NOT_AVAILABLE`, không gọi phần tử đầu tiên/newest là phổ biến nhất. Không tạo mẫu thử để tuyển giọng nếu user không yêu cầu.
+
+Schema ví dụ phiên hiện tại (đọc lại trước dùng):
+```javascript
+const voices = await tools.mcp__codex_apps__heygen_list_voices({
+  engine: "starfish", type: "public", language: "Vietnamese", locale: "vi-VN", limit: 10
+});
+// Inspect actual metadata and select a returned, compatible voiceId.
+// Generation below is for a requested video with exact approved script, not skill installation.
+const speech = await tools.mcp__codex_apps__heygen_create_speech({
+  text: approvedScript, voiceId: verifiedVoiceId,
+  locale: "vi-VN", speed: 1.0, inputType: "text"
+});
+```
+Không truyền `engine` vào create_speech nếu schema không có field đó. Nếu metadata trả engine mâu thuẫn, xác minh bằng đọc được phép; không tự suy compatible từ tên giọng. Không cần user xác nhận lựa chọn thông thường. Capability/entitlement thật không có thì báo blocker; không tự mua; việc chuyển ElevenLabs → HeyGen tuân theo voice-routing.md.

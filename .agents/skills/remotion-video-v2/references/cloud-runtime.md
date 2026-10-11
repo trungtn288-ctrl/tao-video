@@ -1,3 +1,5 @@
+Quy tắc hiện hành: [voice-routing.md](voice-routing.md) — ElevenLabs Việt trước, HeyGen Việt sau; thay mặc định chỉ HeyGen và quy tắc cấm chuyển giữa hai provider trong tài liệu cũ.
+
 # V2 trên Cloud
 
 ## Phạm vi
@@ -12,11 +14,11 @@ Kiểm tra network trước khi tải dependencies, font hoặc gửi TTS. Khôn
 
 ## Font
 
-V2 dùng Segoe UI nhưng gói không phân phối font Windows. Kiểm tra font đã cài và glyph tiếng Việt. Nếu Cloud thiếu font, có thể dùng font do người dùng cung cấp hợp lệ. Nếu cần font thay thế, trình bày tên và ảnh hưởng bố cục, xin quyết định vì thay đổi font chuẩn. Không tự tải font Segoe UI từ nguồn không rõ. Sau chọn font, kiểm tra lại text wrapping và safe zone.
+Tự chọn font theo [font-selection.md](font-selection.md). Kiểm font file, glyph tiếng Việt và render thực tế. Nếu font hiện tại không có hoặc thiếu dấu, tự thay bằng font có sẵn hợp lệ; không yêu cầu người dùng xác nhận tên font. Không tự lấy font Windows từ nguồn không rõ. Sau chọn kiểm wrapping, baseline, highlight và safe zone.
 
 ## Voice
 
-Đầu vào ưu tiên audio đã duyệt; audio mới dùng HeyGen speech qua plugin nếu kết nối có capability. Đọc [quy trình HeyGen](heygen-voice.md). Không giả định plugin trên Windows cũng có trên Cloud. Edge TTS chỉ khi người dùng chọn trong phạm vi cho phép. Kế thừa authorization của session nếu đã rõ, không hỏi lại vô cớ. Nếu chưa được phép gửi script mới đến Edge TTS thì hỏi trước bước gửi. Nếu HeyGen/endpoint không khả dụng, báo rõ và dùng audio người dùng cung cấp nếu có; không tự chuyển provider hoặc API trả phí.
+Đầu vào ưu tiên audio đã duyệt; audio mới ưu tiên ElevenLabs Việt, tiếp theo HeyGen speech qua plugin nếu kết nối có capability. Đọc [quy trình HeyGen](heygen-voice.md). Không giả định plugin trên Windows cũng có trên Cloud. Edge TTS chỉ khi người dùng chọn trong phạm vi cho phép. Kế thừa authorization của session nếu đã rõ, không hỏi lại vô cớ. Nếu chưa được phép gửi script mới đến Edge TTS thì hỏi trước bước gửi. Nếu HeyGen/endpoint không khả dụng, báo rõ và dùng audio người dùng cung cấp nếu có; không tự chuyển sang provider khác ngoài thứ tự ElevenLabs → HeyGen được phép trong voice-routing.md.
 
 ## Khung tham chiếu
 
@@ -26,6 +28,10 @@ V2 dùng Segoe UI nhưng gói không phân phối font Windows. Kiểm tra font 
 
 Phân biệt kết quả: skill đã tạo, skill đã cài trong tài khoản Cloud, runtime đã kiểm tra, video đã render. Chỉ khẳng định skill Cloud đã cài khi giao diện hoặc API trả về trạng thái lưu/cài và có thể gọi skill. FileZIP đính kèm chat chỉ là tài liệu đầu vào, chưa chứng minh skill đã cài vĩnh viễn.
 
-## Tích hợp repo này
+## Tạo hình
 
-Đọc AGENTS.md ở gốc repository. Trong trungtn288-ctrl/tao-video, chỉnh mã nguồn trên Cloud và render/kiểm tra khung hình trên GitHub Actions. Không mở Studio hoặc render trên máy cá nhân. Việc lưu skill vào Git không cài skill toàn tài khoản; phiên Cloud cần checkout nhánh có thư mục .agents/skills/remotion-video-v2.
+Dùng imagegen built-in nếu khả dụng theo image-generation.md; skill hướng dẫn không tự cung cấp engine. Tạo asset riêng theo cảnh, kiểm trước khi tích hợp public/assets. Đọc schema đang có; không bịa tham số model/quality/size. Nếu unavailable không gọi SVG sơ sài là ảnh photoreal.
+
+## Môi trường render hiện tại
+
+Áp dụng [GitHub Actions](github-actions.md) cho render và khung QA; kiểm runtime renderer trong runner, không bắt Cloud chat hoặc Windows có renderer local. Cloud cần khả năng thao tác repository/workflow và đọc artifact. Không tự fallback local.

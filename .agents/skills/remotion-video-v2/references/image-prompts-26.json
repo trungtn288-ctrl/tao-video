@@ -1,0 +1,217 @@
+{
+  "revision": "2026-10-10-visual-auto",
+  "common_prompt_file": "original-image-common.txt",
+  "provenance_note": "Common prompt and scene recipes retained from the supplied catalog. Scenes 21–26 are described by the input as verbatim; 01–20 as reconstructions. Original image files are not bundled or inspected; generation cannot guarantee identical pixels.",
+  "items": [
+    {
+      "number": 1,
+      "title": "NGUYÊN TẮC CHUNG",
+      "scene": "Photoreal white porcelain bowl of cooked white rice with individual irregular grains on wooden kitchen counter, detailed open refrigerator behind, soft window light, natural depth and contact shadows.",
+      "asset": "assets/visual-reference-26/01.webp",
+      "prompt_provenance": "reusable_reconstruction_from_scene_record",
+      "asset_status": "NOT_INCLUDED"
+    },
+    {
+      "number": 2,
+      "title": "BA NHÓM CẢNH",
+      "scene": "Three coordinated panels: photoreal rice bowl; clean explanatory rice-growing and processing diagram labeled SƠ ĐỒ; precise typography information card. Photographic foundations with restrained clean graphic support.",
+      "asset": "assets/visual-reference-26/02.webp",
+      "prompt_provenance": "reusable_reconstruction_from_scene_record",
+      "asset_status": "NOT_INCLUDED"
+    },
+    {
+      "number": 3,
+      "title": "CHỌN NGUỒN HÌNH",
+      "scene": "Real creator desk with camera, laptop, photographic prints and storyboard. Four clear labels TỰ QUAY, TƯ LIỆU, ẢNH AI, SƠ ĐỒ; rich tactile materials, daylight, no fake brands.",
+      "asset": "assets/visual-reference-26/03.webp",
+      "prompt_provenance": "reusable_reconstruction_from_scene_record",
+      "asset_status": "NOT_INCLUDED"
+    },
+    {
+      "number": 4,
+      "title": "ĐỘ GIỐNG THẬT",
+      "scene": "Macro editorial photograph of ceramic rice bowl, clear glass water, metal spoon, wooden counter and linen napkin. Correct reflections, surface texture, thickness and contact shadows.",
+      "asset": "assets/visual-reference-26/04.webp",
+      "prompt_provenance": "reusable_reconstruction_from_scene_record",
+      "asset_status": "NOT_INCLUDED"
+    },
+    {
+      "number": 5,
+      "title": "NGƯỜI & BÀN TAY",
+      "scene": "Fictional Vietnamese adult woman in natural kitchen holding glass salad container; inset close-up of hands with anatomically plausible fingers, natural grasp and physical contact. Real skin texture and expression.",
+      "asset": "assets/visual-reference-26/05.webp",
+      "prompt_provenance": "reusable_reconstruction_from_scene_record",
+      "asset_status": "NOT_INCLUDED"
+    },
+    {
+      "number": 6,
+      "title": "TRẺ EM & NHÓM TUỔI",
+      "scene": "Fictional three-year-old Vietnamese girl and an older woman playing with wooden blocks in warm home. Age-appropriate proportions, clothing, safe natural play, expressive faces and correct hands.",
+      "asset": "assets/visual-reference-26/06.webp",
+      "prompt_provenance": "reusable_reconstruction_from_scene_record",
+      "asset_status": "NOT_INCLUDED"
+    },
+    {
+      "number": 7,
+      "title": "ĐỘNG VẬT",
+      "scene": "Lifelike cat walking naturally; photographic inset details of bird feathers and fish fins. Species-correct anatomy, natural fur, scales and feathers, believable environment and posture.",
+      "asset": "assets/visual-reference-26/07.webp",
+      "prompt_provenance": "reusable_reconstruction_from_scene_record",
+      "asset_status": "NOT_INCLUDED"
+    },
+    {
+      "number": 8,
+      "title": "THỰC PHẨM & CẢNH BẾP",
+      "scene": "Cooked rice bowl, shallow glass container, detailed real refrigerator and adult hand placing rice container. Correct food texture, depth, shelf geometry and hand contact, natural kitchen light.",
+      "asset": "assets/visual-reference-26/08.webp",
+      "prompt_provenance": "reusable_reconstruction_from_scene_record",
+      "asset_status": "NOT_INCLUDED"
+    },
+    {
+      "number": 9,
+      "title": "ĐỒ VẬT & SẢN PHẨM",
+      "scene": "Premium realistic product photography of stainless kettle, glass-and-metal smartphone, glass jars and cloth on counter. Accurate geometry, tactile materials and natural reflections, no invented brand labels.",
+      "asset": "assets/visual-reference-26/09.webp",
+      "prompt_provenance": "reusable_reconstruction_from_scene_record",
+      "asset_status": "NOT_INCLUDED"
+    },
+    {
+      "number": 10,
+      "title": "PHƯƠNG TIỆN & MÁY MÓC",
+      "scene": "Believable warehouse forklift with realistic mast, forks, tires and low pallet, organized warehouse environment. Photographic scale and machinery structure; this illustration does not certify a safety procedure.",
+      "asset": "assets/visual-reference-26/10.webp",
+      "prompt_provenance": "reusable_reconstruction_from_scene_record",
+      "asset_status": "NOT_INCLUDED"
+    },
+    {
+      "number": 11,
+      "title": "KHÔNG GIAN & THIÊN NHIÊN",
+      "scene": "Three beautiful realistic panels: house interior with correct architectural perspective, rice field at natural daylight, forest stream with realistic plants and water. Fictional generic locations.",
+      "asset": "assets/visual-reference-26/11.webp",
+      "prompt_provenance": "reusable_reconstruction_from_scene_record",
+      "asset_status": "NOT_INCLUDED"
+    },
+    {
+      "number": 12,
+      "title": "SỰ KIỆN & TƯ LIỆU",
+      "scene": "Photoreal desk camera and fictional generic city prints with four clear category labels TƯ LIỆU, ẢNH LƯU TRỮ, TÁI DỰNG, MINH HỌA AI. Footer Ví dụ minh họa. All scene images fictional, not documentary evidence.",
+      "asset": "assets/visual-reference-26/12.webp",
+      "prompt_provenance": "reusable_reconstruction_from_scene_record",
+      "asset_status": "NOT_INCLUDED"
+    },
+    {
+      "number": 13,
+      "title": "SỨC KHỎE & KHOA HỌC",
+      "scene": "Photoreal classroom teaching torso model and microscope, screen with clearly stylized microbe depiction labeled MINH HỌA PHÓNG ĐẠI. Educational category reference, not a verified anatomical chart or actual micrograph.",
+      "asset": "assets/visual-reference-26/13.webp",
+      "prompt_provenance": "reusable_reconstruction_from_scene_record",
+      "asset_status": "NOT_INCLUDED"
+    },
+    {
+      "number": 14,
+      "title": "ỨNG DỤNG & GIAO DIỆN",
+      "scene": "Natural adult hand holding realistic smartphone showing fictional generic app with clear label GIAO DIỆN MINH HỌA and button XÁC NHẬN. Correct perspective and hand contact. No claim about a real app feature.",
+      "asset": "assets/visual-reference-26/14.webp",
+      "prompt_provenance": "reusable_reconstruction_from_scene_record",
+      "asset_status": "NOT_INCLUDED"
+    },
+    {
+      "number": 15,
+      "title": "BẢNG BIỂU & BẢN ĐỒ",
+      "scene": "Photoreal desk with three printed cards labeled BẢNG, BIỂU ĐỒ, BẢN ĐỒ. Blank table, illustrative bars without numeric claims, fictional generic geography. Footer DỮ LIỆU MINH HỌA. Concept layout only.",
+      "asset": "assets/visual-reference-26/15.webp",
+      "prompt_provenance": "reusable_reconstruction_from_scene_record",
+      "asset_status": "NOT_INCLUDED"
+    },
+    {
+      "number": 16,
+      "title": "SƠ ĐỒ & KHÁI NIỆM",
+      "scene": "Clean three-step explanatory board combining realistic photos of rice divided into shallow containers, cooling rack and refrigerator with restrained arrows; labels CHIA NHỎ, LÀM NGUỘI NHANH, CẤT LẠNH. Illustrative process, not a source for timing advice.",
+      "asset": "assets/visual-reference-26/16.webp",
+      "prompt_provenance": "reusable_reconstruction_from_scene_record",
+      "asset_status": "NOT_INCLUDED"
+    },
+    {
+      "number": 17,
+      "title": "PHONG CÁCH & BỐ CỤC",
+      "scene": "Same photoreal rice bowl and kitchen across hero image and three detail crops showing lighting, material texture and continuity. Labels ÁNH SÁNG, CHẤT LIỆU, NHẤT QUÁN. Natural premium color grade.",
+      "asset": "assets/visual-reference-26/17.webp",
+      "prompt_provenance": "reusable_reconstruction_from_scene_record",
+      "asset_status": "NOT_INCLUDED"
+    },
+    {
+      "number": 18,
+      "title": "CHỮ & VÙNG AN TOÀN",
+      "scene": "Realistic phone beside vertical layout card with generic simulated platform UI, important photographic subject centered, readable text Cất đúng cách, label BỐ CỤC MINH HỌA. Concept only; actual safe-zone geometry must be coded and checked.",
+      "asset": "assets/visual-reference-26/18.webp",
+      "prompt_provenance": "reusable_reconstruction_from_scene_record",
+      "asset_status": "NOT_INCLUDED"
+    },
+    {
+      "number": 19,
+      "title": "CHUYỂN ĐỘNG & NHỊP",
+      "scene": "A single cinematic storyboard reference image with three photoreal consecutive frames showing SAME natural adult hands and SAME shallow rice container in SAME sunlit kitchen: picking up the filled container, moving toward open fridge, placing it on a fridge shelf. Realistic physical contact and consistent clothing and container. Small simple arrow connecting frames, labels BẮT ĐẦU, THAO TÁC, KẾT THÚC. It illustrates action progression; do not claim it is an actual video.",
+      "asset": "assets/visual-reference-26/19.webp",
+      "prompt_provenance": "reusable_reconstruction_from_scene_record",
+      "asset_status": "NOT_INCLUDED"
+    },
+    {
+      "number": 20,
+      "title": "MÔ TẢ TẠO HÌNH",
+      "scene": "Photoreal rice bowl hero and creator notebook with concise Vietnamese visual brief: subject, action, setting, lighting and material. Rich natural texture and composition; no lengthy tiny illegible paragraphs.",
+      "asset": "assets/visual-reference-26/20.webp",
+      "prompt_provenance": "reusable_reconstruction_from_scene_record",
+      "asset_status": "NOT_INCLUDED"
+    },
+    {
+      "number": 21,
+      "title": "QUY TRÌNH TỰ KIỂM",
+      "scene": "A premium photoreal video creator desk, large monitor showing realistic rice bowl footage, clean five-stage review board across the lower image with exactly five short labels: 'KHỚP NỘI DUNG', 'KIỂM HÌNH', 'KIỂM BỐ CỤC', 'XEM VIDEO', 'BÁO KẾT QUẢ'. Real photographic thumbnails, simple arrows only. Warm daylight, believable keyboard and camera, organized workspace. This is a workflow illustration, not a completed quality certification.",
+      "asset": "assets/visual-reference-26/21.webp",
+      "prompt_provenance": "verbatim_scene",
+      "asset_status": "NOT_INCLUDED"
+    },
+    {
+      "number": 22,
+      "title": "LỖI PHẢI LOẠI",
+      "scene": "One side-by-side comparison reference. LEFT intentionally poor simplistic flat vector rice bowl and refrigerator, obvious crude geometric shapes, label 'KHÔNG ĐẠT'. RIGHT beautiful genuinely photoreal ceramic bowl with individual cooked rice grains, wood surface and detailed refrigerator behind, label 'ĐẠT'. Equal panel sizes. The left deliberately demonstrates a failure, overriding the no-cartoon rule only for this comparison panel. No grotesque deformities. Strong clear contrast in material, light and realism.",
+      "asset": "assets/visual-reference-26/22.webp",
+      "prompt_provenance": "verbatim_scene",
+      "asset_status": "NOT_INCLUDED"
+    },
+    {
+      "number": 23,
+      "title": "KIỂM TRA NGHIỆM THU",
+      "scene": "Photoreal creator workstation with monitor showing attractive realistic rice footage and legible Vietnamese subtitle 'Cất đúng cách'. Beside monitor a clean review sheet with four short criteria: 'ĐÚNG Ý', 'GIỐNG THẬT', 'ĐỌC ĐƯỢC', 'CHUYỂN ĐỘNG'. Small photo detail crops show rice texture, natural human hands and clear typography. Label 'CHECKLIST MINH HỌA'. Do not present this as proof of actual successful testing.",
+      "asset": "assets/visual-reference-26/23.webp",
+      "prompt_provenance": "verbatim_scene",
+      "asset_status": "NOT_INCLUDED"
+    },
+    {
+      "number": 24,
+      "title": "LƯU BỘ TÀI NGUYÊN",
+      "scene": "Beautiful realistic organized editing desk with camera, external drive, headphones and laptop displaying neat visual media cards, exactly five clear short folder labels: 'SCRIPT', 'HÌNH GỐC', 'AUDIO', 'TIMELINE', 'BẢN XUẤT'. Realistic printed photographic contact sheets of rice kitchen scenes nearby. Premium tactile materials, natural light, useful organization, no fake brand logos or tiny gibberish.",
+      "asset": "assets/visual-reference-26/24.webp",
+      "prompt_provenance": "verbatim_scene",
+      "asset_status": "NOT_INCLUDED"
+    },
+    {
+      "number": 25,
+      "title": "ÁP DỤNG NHIỀU CHỦ ĐỀ",
+      "scene": "One coherent six-panel premium photographic reference board, exactly six distinct photoreal scenes: ceramic bowl of cooked rice in kitchen, adult walking in green park, healthy cat on wood floor, stainless kettle on counter, warehouse forklift carrying low pallet safely, human hand holding generic smartphone. Consistent refined natural color grading, realistic materials and lighting, each scene has its own appropriate environment. Six clear labels: 'ẨM THỰC', 'ĐỜI SỐNG', 'ĐỘNG VẬT', 'SẢN PHẨM', 'CÔNG VIỆC', 'CÔNG NGHỆ'. No real app identity, fake logos or scientific claims.",
+      "asset": "assets/visual-reference-26/25.webp",
+      "prompt_provenance": "verbatim_scene",
+      "asset_status": "NOT_INCLUDED"
+    },
+    {
+      "number": 26,
+      "title": "MỘT CHUẨN DÙNG CHUNG",
+      "scene": "Photoreal premium creative workstation, central open visual standards book with clean photographic pages and short large text 'ĐÚNG Ý • GIỐNG THẬT • ĐẸP • DỄ HIỂU'. Around it neatly arranged four high quality printed scene photographs: beautiful rice bowl, natural cat, realistic stainless kettle, warehouse forklift, all consistent in photographic quality and color. A laptop displaying the same four images as an organized reference board. Warm natural daylight, realistic paper grain, wood, lens and metal. This illustrates shared quality standards; no perfect-performance guarantee, no certification stamp, no claim software has been installed or updated.",
+      "asset": "assets/visual-reference-26/26.webp",
+      "prompt_provenance": "verbatim_scene",
+      "asset_status": "NOT_INCLUDED"
+    }
+  ],
+  "asset_encoding": "Lossless WebP; decoded RGBA pixels verified identical to each original approved PNG. Original PNGs are preserved in the generation workspace.",
+  "packaging_note": "The 26 original reference images were not supplied in SKILL.zip or assets1.zip. Asset paths are historical; no image comparison or pixel preservation is claimed for this package."
+}

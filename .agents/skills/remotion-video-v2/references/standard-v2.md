@@ -1,3 +1,5 @@
+Quy tắc hiện hành: [voice-routing.md](voice-routing.md) — ElevenLabs Việt trước, HeyGen Việt sau; thay mặc định chỉ HeyGen và quy tắc cấm chuyển giữa hai provider trong tài liệu cũ.
+
 # REMOTION STANDARD V2
 
 Ngày chuẩn hóa: 09/10/2026. Chuẩn hiện tại theo yêu cầu người dùng, dựa trên R3, R4Plus và R4Plus TikTokSafe. Phạm vi: video faceless Knowledge Motion Design. Không thay đổi architecture, phase hoặc roadmap MPT.
@@ -12,10 +14,10 @@ Yêu cầu mẫu: “Tạo video theo Remotion V2 với script đính kèm. Gi�
 
 - Giữ nguyên lời thoại khi người dùng khóa script. Không tự rút gọn, viết lại hoặc sửa ý. Nếu phát hiện vấn đề dữ liệu trong script đã khóa, nêu vấn đề trước khi thay đổi.
 - Thiết kế premium, rõ ràng, có hoạt cảnh gắn với nội dung. Không cần chuyển động thực của nhân vật mặc định.
-- Font Segoe UI hỗ trợ tiếng Việt. Môi trường thiếu font phải kiểm tra và thống nhất thay thế trước khi đổi chuẩn.
+- Tự chọn font tiếng Việt theo [quy tắc font](font-selection.md). Giữ font hiện tại nếu đạt; khi thiếu tự chọn font hợp lệ khác và kiểm wrapping/safe zone, không hỏi lại.
 - Khung video dọc1080×1920,30fps. Đầu ra MP4 H.264/AAC khi người dùng yêu cầu render.
 - Tiêu đề, phụ đề, số liệu, nguồn và CTA tránh UI TikTok. Nền và trang trí phủ toàn màn hình.
-- HeyGen speech là provider audio mới được người dùng yêu cầu ngày 10/10/2026; không tự mua credits/gói, dùng API key riêng hoặc dùng dịch vụ khác. Trong repo này, dùng GitHub Actions để render và kiểm tra khung hình theo AGENTS.md của dự án.
+- Audio mới ưu tiên ElevenLabs tiếng Việt, rồi HeyGen tiếng Việt theo [voice-routing.md](voice-routing.md); không tự mua credits/gói, dùng API key riêng hoặc dùng dịch vụ khác. Dựng, render và kiểm khung bằng GitHub Actions tại repository trungtn288-ctrl/tao-video, thư mục remotion theo [quy trình](github-actions.md). Không mở Studio hoặc render local trừ khi người dùng yêu cầu rõ ràng.
 
 ## Màu sắc
 
@@ -43,7 +45,7 @@ Mục tiêu thay đổi thông tin hoặc bố cục có ý nghĩa khoảng2–3
 
 ## Voice, nhạc và SFX
 
-Audio mới mặc định dùng HeyGen speech theo [quy trình HeyGen](heygen-voice.md). Giọng vi-VN-HoaiMyNeural là lựa chọn cũ đã test, chỉ dùng Edge TTS khi người dùng chọn và cho phép gửi script. Không tự fallback khi HeyGen thiếu capability. Ưu tiên audio đã duyệt khi chỉ sửa hình. Tốc độ tùy script, giọng tự nhiên, rõ, ít nghỉ thừa. Không khóa cấu hình tăng tốc của R4 cho mọi video mới.
+Audio mới ưu tiên ElevenLabs Việt, sau đó HeyGen Việt theo [thứ tự provider](voice-routing.md). Giọng vi-VN-HoaiMyNeural là lựa chọn cũ đã test, chỉ dùng Edge TTS khi người dùng chọn và cho phép gửi script. Không tự fallback khi HeyGen thiếu capability. Ưu tiên audio đã duyệt khi chỉ sửa hình. Tốc độ tùy script, giọng tự nhiên, rõ, ít nghỉ thừa. Không khóa cấu hình tăng tốc của R4 cho mọi video mới.
 
 Nhạc nhẹ dưới voice, có đường cường độ theo nội dung. SFX ngắn ở điểm cảnh báo, xác nhận hoặc chuyển ý. Kiểm tra bằng nghe toàn bộ, không chỉ đo đỉnh âm lượng. Kết quả R4Plus tham chiếu: mean -22,1dBFS,peak -6,4dBFS, không phải chuẩn âm lượng bắt buộc cho mọi video.
 
@@ -68,10 +70,18 @@ Technical success, content success và business success là ba đánh giá riên
 
 ## Phiên bản chuẩn và revision video
 
-V2 kế thừa baseline hình và HeyGen voice từ gói V1 do người dùng cung cấp. Đổi tên và đưa lên Git ngày 10/10/2026 theo yêu cầu người dùng; không khẳng định đã nâng chất lượng hoặc test giọng mới. Đọc [changelog](changelog.md).
+Skill hiện hành là remotion-video-v2, revision 2026-10-11-elevenlabs-fonts. Người dùng yêu cầu nâng cấp V2 từ gói V1 mới; không tạo skill V3. Giữ bản V2 trước cập nhật trong baseline-v2-20261010/ và baseline V1 của đầu vào trong baseline-20261010/. Các bản này chỉ để đối chiếu, không điều khiển runtime.
 
-Thay script hoặc sửa lỗi một video không tự tăng phiên bản chuẩn. Ví dụ: Topic_V2_r01.mp4 và Topic_V2_r02.mp4. Khi nâng hệ thiết kế, vùng chữ hoặc nhịp chuẩn, ghi thay đổi, lý do và kết quả test; chỉ tạo V3 sau khi người dùng yêu cầu hoặc xác nhận.
+Thay script hoặc sửa một video không tự tăng phiên bản chuẩn. Ví dụ: Topic_V2_r01.mp4 và Topic_V2_r02.mp4. Đọc [changelog](changelog.md); chỉ tạo V3 khi người dùng yêu cầu hoặc xác nhận.
 
 ## Nguồn nội bộ
 
 R4_PLUS_PRODUCTION_NOTES.md, R4_TIKTOK_SAFE_NOTES.md, R4_COMPARISON_REVIEW.md, r4-video/src-safe/Design.tsx, timeline-plus.json và hội thoại người dùng. Video tham chiếu: r4-video/out/BankingScamAlert_R4Plus_TikTokSafe_1080x1920.mp4. Không sửa sources/.
+
+## Cập nhật được người dùng cho phép ngày 10/10/2026
+
+Áp dụng [chuẩn hình ảnh26](visual-standard-26.md), [prompt/imagegen](image-generation.md), tự chọn giọng ElevenLabs rồi HeyGen và font tiếng Việt. Các quy tắc mới này thay phần mô tả hình sơ sài hoặc bắt duyệt giọng/font trong baseline. Giữ palette, safe zone, khóa script, output và bằng chứng QA; giữ tên V2 theo yêu cầu trực tiếp. Baseline trước cập nhật ở baseline-20261010/, chỉ đọc để đối chiếu, không ghi đè hướng dẫn active.
+
+## Bổ sung ngày 11/10/2026
+
+Giữ V2 theo yêu cầu nâng cấp trực tiếp. Áp dụng [nhận diện đối tượng đích danh](named-subjects.md) và [GitHub Actions](github-actions.md), thay hướng dẫn GitHub cũ; baseline chỉ là lịch sử.

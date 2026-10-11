@@ -1,7 +1,7 @@
 {
   "revision": "2026-10-10-visual-auto",
   "common_prompt_file": "original-image-common.txt",
-  "provenance_note": "Common prompt and scene recipes retained from the supplied catalog. Scenes 21–26 described by input as verbatim; 01–20 as reconstructions. Images 13–26 supplied as WEBP references; 01–12 unavailable. Generation cannot guarantee identical pixels.",
+  "provenance_note": "Common prompt and scene recipes retained from supplied catalog. Scenes 21–26 described by input as verbatim; 01–20 as reconstructions. All 26 WEBP references are supplied. Generation cannot guarantee identical pixels.",
   "items": [
     {
       "number": 1,
@@ -9,7 +9,7 @@
       "scene": "Photoreal white porcelain bowl of cooked white rice with individual irregular grains on wooden kitchen counter, detailed open refrigerator behind, soft window light, natural depth and contact shadows.",
       "asset": "assets/visual-reference-26/01.webp",
       "prompt_provenance": "reusable_reconstruction_from_scene_record",
-      "asset_status": "NOT_INCLUDED"
+      "asset_status": "INCLUDED"
     },
     {
       "number": 2,
@@ -17,7 +17,7 @@
       "scene": "Three coordinated panels: photoreal rice bowl; clean explanatory rice-growing and processing diagram labeled SƠ ĐỒ; precise typography information card. Photographic foundations with restrained clean graphic support.",
       "asset": "assets/visual-reference-26/02.webp",
       "prompt_provenance": "reusable_reconstruction_from_scene_record",
-      "asset_status": "NOT_INCLUDED"
+      "asset_status": "INCLUDED"
     },
     {
       "number": 3,
@@ -25,7 +25,7 @@
       "scene": "Real creator desk with camera, laptop, photographic prints and storyboard. Four clear labels TỰ QUAY, TƯ LIỆU, ẢNH AI, SƠ ĐỒ; rich tactile materials, daylight, no fake brands.",
       "asset": "assets/visual-reference-26/03.webp",
       "prompt_provenance": "reusable_reconstruction_from_scene_record",
-      "asset_status": "NOT_INCLUDED"
+      "asset_status": "INCLUDED"
     },
     {
       "number": 4,
@@ -33,7 +33,7 @@
       "scene": "Macro editorial photograph of ceramic rice bowl, clear glass water, metal spoon, wooden counter and linen napkin. Correct reflections, surface texture, thickness and contact shadows.",
       "asset": "assets/visual-reference-26/04.webp",
       "prompt_provenance": "reusable_reconstruction_from_scene_record",
-      "asset_status": "NOT_INCLUDED"
+      "asset_status": "INCLUDED"
     },
     {
       "number": 5,
@@ -41,7 +41,7 @@
       "scene": "Fictional Vietnamese adult woman in natural kitchen holding glass salad container; inset close-up of hands with anatomically plausible fingers, natural grasp and physical contact. Real skin texture and expression.",
       "asset": "assets/visual-reference-26/05.webp",
       "prompt_provenance": "reusable_reconstruction_from_scene_record",
-      "asset_status": "NOT_INCLUDED"
+      "asset_status": "INCLUDED"
     },
     {
       "number": 6,
@@ -49,7 +49,7 @@
       "scene": "Fictional three-year-old Vietnamese girl and an older woman playing with wooden blocks in warm home. Age-appropriate proportions, clothing, safe natural play, expressive faces and correct hands.",
       "asset": "assets/visual-reference-26/06.webp",
       "prompt_provenance": "reusable_reconstruction_from_scene_record",
-      "asset_status": "NOT_INCLUDED"
+      "asset_status": "INCLUDED"
     },
     {
       "number": 7,
@@ -57,7 +57,7 @@
       "scene": "Lifelike cat walking naturally; photographic inset details of bird feathers and fish fins. Species-correct anatomy, natural fur, scales and feathers, believable environment and posture.",
       "asset": "assets/visual-reference-26/07.webp",
       "prompt_provenance": "reusable_reconstruction_from_scene_record",
-      "asset_status": "NOT_INCLUDED"
+      "asset_status": "INCLUDED"
     },
     {
       "number": 8,
@@ -65,7 +65,7 @@
       "scene": "Cooked rice bowl, shallow glass container, detailed real refrigerator and adult hand placing rice container. Correct food texture, depth, shelf geometry and hand contact, natural kitchen light.",
       "asset": "assets/visual-reference-26/08.webp",
       "prompt_provenance": "reusable_reconstruction_from_scene_record",
-      "asset_status": "NOT_INCLUDED"
+      "asset_status": "INCLUDED"
     },
     {
       "number": 9,
@@ -73,7 +73,7 @@
       "scene": "Premium realistic product photography of stainless kettle, glass-and-metal smartphone, glass jars and cloth on counter. Accurate geometry, tactile materials and natural reflections, no invented brand labels.",
       "asset": "assets/visual-reference-26/09.webp",
       "prompt_provenance": "reusable_reconstruction_from_scene_record",
-      "asset_status": "NOT_INCLUDED"
+      "asset_status": "INCLUDED"
     },
     {
       "number": 10,
@@ -81,7 +81,7 @@
       "scene": "Believable warehouse forklift with realistic mast, forks, tires and low pallet, organized warehouse environment. Photographic scale and machinery structure; this illustration does not certify a safety procedure.",
       "asset": "assets/visual-reference-26/10.webp",
       "prompt_provenance": "reusable_reconstruction_from_scene_record",
-      "asset_status": "NOT_INCLUDED"
+      "asset_status": "INCLUDED"
     },
     {
       "number": 11,
@@ -89,7 +89,7 @@
       "scene": "Three beautiful realistic panels: house interior with correct architectural perspective, rice field at natural daylight, forest stream with realistic plants and water. Fictional generic locations.",
       "asset": "assets/visual-reference-26/11.webp",
       "prompt_provenance": "reusable_reconstruction_from_scene_record",
-      "asset_status": "NOT_INCLUDED"
+      "asset_status": "INCLUDED"
     },
     {
       "number": 12,
@@ -97,7 +97,7 @@
       "scene": "Photoreal desk camera and fictional generic city prints with four clear category labels TƯ LIỆU, ẢNH LƯU TRỮ, TÁI DỰNG, MINH HỌA AI. Footer Ví dụ minh họa. All scene images fictional, not documentary evidence.",
       "asset": "assets/visual-reference-26/12.webp",
       "prompt_provenance": "reusable_reconstruction_from_scene_record",
-      "asset_status": "NOT_INCLUDED"
+      "asset_status": "INCLUDED"
     },
     {
       "number": 13,
@@ -213,5 +213,5 @@
     }
   ],
   "asset_encoding": "Lossless WebP; decoded RGBA pixels verified identical to each original approved PNG. Original PNGs are preserved in the generation workspace.",
-  "packaging_note": "assets2.zip supplies original sample images 13–26. Images 01–12 are not included. Supplied images decode and match archive bytes; no comparison to earlier PNG originals is claimed."
+  "packaging_note": "All 26 WEBP reference images are bundled: 01–12 from corrected assets1.zip and 13–26 from assets2.zip. Archive bytes are preserved; no comparison to earlier PNG originals is claimed."
 }

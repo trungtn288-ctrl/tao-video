@@ -26,3 +26,9 @@
 - Cập nhật catalog, hướng dẫn và inventory theo file thật; 01–12 vẫn NOT_INCLUDED.
 - Kiểm giải mã 14 ảnh 1536×1024 và xem contact sheet để đối chiếu số mục; không khẳng định toàn bộ chữ/chi tiết ảnh hoặc video đã QA.
 - Font/license/icon/hai ảnh bố cục trùng bản đã đóng gói, không thay đổi voice, font, chuẩn hoặc quy trình.
+
+### Hoàn thiện bộ 26 ảnh — 11/10/2026
+
+- assets1.zip mới bổ sung 12 ảnh WebP 01–12, giữ nguyên byte trong assets/visual-reference-26/.
+- Catalog và inventory hiện có đủ 26 ảnh INCLUDED, không còn đường dẫn ảnh thiếu.
+- Giải mã 12 ảnh mới và đối chiếu số mục bằng contact sheet. Giữ nguyên chuẩn, voice, font và quy trình; không tuyên bố đã QA video.

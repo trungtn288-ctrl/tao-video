@@ -30,7 +30,7 @@ Nâng cấp V2 ngày 11/10/2026 từ SKILL.zip và assets1.zip do người dùng
 
 Nhận script đã khóa → kiểm runtime → lập bảng lời/cảnh/đối tượng/hành động/nguồn/tính xác thực → chọn giọng và font → tạo/reuse audio → lập timing thực → chọn/tạo tài nguyên theo chuẩn26 → kiểm tài nguyên → dựng Remotion → xem đủ cảnh và mốc tương tác/zoom/UI mô phỏng → render → giải mã toàn file → nghe/xem thực tế khi có capability → sửa lỗi trong phạm vi → báo kết quả đúng bằng chứng.
 
-Prompt và đường dẫn ảnh lịch sử nằm trong [danh mục 26 mẫu](references/image-prompts-26.json); Đã đóng gói ảnh mẫu 13–26 từ assets2.zip; ảnh 01–12 chưa được cung cấp. Đọc [tài nguyên đi kèm](references/asset-inventory.md); không giả đã xem hoặc tái tạo đúng ảnh mẫu gốc. Mẫu ảnh ngang có tiêu đề là tài liệu tham chiếu; video sản xuất phải tạo ảnh theo khung dọc và chèn chữ bằng Remotion. Không đưa nguyên banner “MINH HỌA CHUẨN HÌNH ẢNH” vào mọi video.
+Prompt và đường dẫn ảnh lịch sử nằm trong [danh mục 26 mẫu](references/image-prompts-26.json); Đã đóng gói đủ 26 ảnh mẫu: 01–12 từ assets1.zip mới và 13–26 từ assets2.zip. Đọc [tài nguyên đi kèm](references/asset-inventory.md); không giả đã xem hoặc tái tạo đúng ảnh mẫu gốc. Mẫu ảnh ngang có tiêu đề là tài liệu tham chiếu; video sản xuất phải tạo ảnh theo khung dọc và chèn chữ bằng Remotion. Không đưa nguyên banner “MINH HỌA CHUẨN HÌNH ẢNH” vào mọi video.
 
 Lưu script, audio, voice metadata, prompt gốc và các chỉnh sửa, tài nguyên, nguồn/quyền, timeline, font path, mã nguồn, khung QA, MP4, metadata và báo cáo trong task. Chỉ sửa file tiến độ nếu hiện diện và được phép. Không tự đăng video.
 

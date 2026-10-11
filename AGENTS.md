@@ -14,5 +14,5 @@
 
 - When the user requests Remotion Video V2, Remotion V2, or `$remotion-video-v2`, read `.agents/skills/remotion-video-v2/SKILL.md` and its linked references before creating or editing a video.
 - Resolve relative paths in the skill from its directory. The bundled JPEGs are layout references, not new video content.
-- V2 revision 2026-10-11-elevenlabs-fonts applies the 26-part visual standard, Vietnamese ElevenLabs then HeyGen voice routing, and automatic licensed Vietnamese font selection. Read the asset inventory: sample images 13–26 are bundled; 01–12 are not yet supplied. Historical baselines are for comparison only. Do not select V2 when the user explicitly requests V1.
+- V2 revision 2026-10-11-elevenlabs-fonts applies the 26-part visual standard, Vietnamese ElevenLabs then HeyGen voice routing, and automatic licensed Vietnamese font selection. Read the asset inventory: all 26 sample images are bundled under assets/visual-reference-26/. Historical baselines are for comparison only. Do not select V2 when the user explicitly requests V1.
 - Apply this repository's Cloud editing and GitHub Actions rendering workflow when following the skill.

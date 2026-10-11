@@ -38,11 +38,11 @@ export const MedicineSafetyV2:React.FC=()=>{
    {scene===3&&<div style={{marginTop:50}}><div style={{display:'flex',gap:24}}>
     <div style={{...box,flex:1,borderTop:'12px solid '+C.cyan}}><div style={{fontSize:26}}>NHÃN A · MINH HỌA</div><strong style={{fontSize:34}}>paracetamol</strong></div>
     <div style={{...box,flex:1,borderTop:'12px solid '+C.amber,opacity:reveal(15)}}><div style={{fontSize:26}}>NHÃN B · MINH HỌA</div><strong style={{fontSize:34}}>paracetamol</strong></div></div>
-    <div style={{fontSize:85,textAlign:'center',color:C.cyan,opacity:reveal(28),margin:'30px 0'}}>↓　↓</div>
+    <div style={{fontSize:85,textAlign:'center',color:C.cyan,opacity:reveal(28),margin:'30px 0'}}><svg width="64" height="80" viewBox="0 0 80 90" fill="none" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"><path d="M40 4 V72 M15 47 L40 72 L65 47"/></svg>　<svg width="64" height="80" viewBox="0 0 80 90" fill="none" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"><path d="M40 4 V72 M15 47 L40 72 L65 47"/></svg></div>
     <div style={{...box,textAlign:'center',fontSize:48,fontWeight:800,opacity:reveal(38)}}>Cộng dồn cùng hoạt chất</div>
     <div style={{fontSize:29,color:C.muted,marginTop:38}}>Sơ đồ khái niệm · không biểu diễn liều cụ thể</div>
    </div>}
-   {scene===4&&<div style={{marginTop:55}}><div style={{borderLeft:'8px solid '+C.amber,padding:'25px 35px',background:'#17332F',borderRadius:24,fontSize:44}}>Quá liều</div><div style={{color:C.amber,fontSize:80,marginLeft:45,opacity:reveal(16)}}>↓</div><div style={{...box,fontSize:48,fontWeight:800,opacity:reveal(25)}}>Có thể tổn thương gan</div><div style={{marginTop:36,padding:35,borderRadius:25,background:C.red,color:C.navy,fontSize:48,fontWeight:800,opacity:reveal(58)}}>Thậm chí suy gan</div></div>}
+   {scene===4&&<div style={{marginTop:55}}><div style={{borderLeft:'8px solid '+C.amber,padding:'25px 35px',background:'#17332F',borderRadius:24,fontSize:44}}>Quá liều</div><div style={{color:C.amber,fontSize:80,marginLeft:45,opacity:reveal(16)}}><svg width="64" height="80" viewBox="0 0 80 90" fill="none" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"><path d="M40 4 V72 M15 47 L40 72 L65 47"/></svg></div><div style={{...box,fontSize:48,fontWeight:800,opacity:reveal(25)}}>Có thể tổn thương gan</div><div style={{marginTop:36,padding:35,borderRadius:25,background:C.red,color:C.navy,fontSize:48,fontWeight:800,opacity:reveal(58)}}>Thậm chí suy gan</div></div>}
    {scene===5&&<div style={{...box,marginTop:24,fontSize:38,fontWeight:700,opacity:reveal(15)}}>Ban đầu vẫn có thể thấy khỏe.</div>}
    {scene===6&&<div style={{...box,marginTop:24,fontSize:36,fontWeight:700,opacity:reveal(40)}}>Dùng đúng hướng dẫn.</div>}
    {scene===7&&<div style={{...box,marginTop:24,fontSize:36,fontWeight:700,opacity:reveal(20)}}>Mang theo các vỏ thuốc.</div>}
@@ -54,6 +54,7 @@ export const MedicineSafetyV2:React.FC=()=>{
   </div>}
  </AbsoluteFill>
 };
+
 
 
 

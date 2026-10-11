@@ -1,10 +1,12 @@
 import json, re, subprocess, unicodedata
 from pathlib import Path
-import stable_whisper
+import hashlib
 from fontTools.ttLib import TTFont
 P=Path('public/medicine')
 OUT=Path('out/medicine'); OUT.mkdir(parents=True,exist_ok=True)
 script=(P/'approved-script.txt').read_text(encoding='utf-8').strip()
+metadata=json.loads((P/'production.json').read_text(encoding='utf-8-sig'))
+assert hashlib.sha256((P/'narration.mp3').read_bytes()).hexdigest()==metadata['narration_sha256']
 font=TTFont(P/'NotoSans-VF.ttf')
 cmap=font.getBestCmap()
 extra="Tiếng Việt: Ă Â Đ Ê Ô Ơ Ư ă â đ ê ô ơ ư; Nguyễn, bảo quản, tủ lạnh, sức khỏe; ắ ằ ẳ ẵ ặ ấ ầ ẩ ẫ ậ ế ề ể ễ ệ ố ồ ổ ỗ ộ ớ ờ ở ỡ ợ ứ ừ ử ữ ự"
@@ -17,6 +19,7 @@ if existing.exists():
     data=json.loads(existing.read_text(encoding='utf-8'))
     (OUT/'alignment.json').write_text(json.dumps(data,ensure_ascii=False),encoding='utf-8')
 else:
+    import stable_whisper
     model=stable_whisper.load_model('small',device='cpu')
     result=model.align(str(P/'narration.mp3'),script,language='vi',original_split=True)
     assert result is not None
@@ -65,6 +68,7 @@ Path('src/medicine').mkdir(parents=True,exist_ok=True)
 Path('src/medicine/timing.json').write_text(json.dumps(timing,ensure_ascii=False,indent=2),encoding='utf-8')
 (OUT/'preflight.json').write_text(json.dumps(dict(font='Noto Sans VF OFL',NFC_NFD_glyphs='PASS',script_integrity='PASS',duration=duration,alignment='stable-ts small real audio',words=len(words)),ensure_ascii=False,indent=2))
 print(json.dumps(dict(duration=duration,starts=starts,pages=len(pages))))
+
 
 
 

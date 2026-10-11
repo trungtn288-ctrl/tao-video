@@ -1,5 +1,8 @@
-import {bundle} from '@remotion/bundler';
-import {selectComposition, renderStill} from '@remotion/renderer';
+import {createRequire} from 'node:module';
+const require=createRequire(import.meta.url);
+const cliRequire=createRequire(require.resolve('@remotion/cli'));
+const {bundle}=cliRequire('@remotion/bundler');
+const {selectComposition,renderStill}=cliRequire('@remotion/renderer');
 import fs from 'node:fs';
 import path from 'node:path';
 const out='out/medicine';fs.mkdirSync(out+'/frames',{recursive:true});
@@ -12,4 +15,5 @@ samples.push({name:'longest-caption',frame:Math.round((longest.startMs+longest.e
 for(let i=1;i<timing.sceneStarts.length;i++)samples.push({name:'transition-'+i,frame:timing.sceneStarts[i]+4});
 for(const sample of samples){await renderStill({serveUrl,composition,output:out+'/frames/'+sample.name+'.png',frame:sample.frame,imageFormat:'png',logLevel:'warn'});console.log(sample)}
 fs.writeFileSync(out+'/qa-samples.json',JSON.stringify(samples,null,2));
+
 

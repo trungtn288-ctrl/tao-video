@@ -23,8 +23,11 @@ jobs:
         with:
           python-version: '3.11'
       - run: sudo apt-get update && sudo apt-get install -y ffmpeg
-      - run: pip install torch torchaudio --index-url https://download.pytorch.org/whl/cpu
-      - run: pip install stable-ts==2.19.1 fonttools pillow
+      - if: "${{ hashFiles('remotion/src/medicine/alignment.json') == '' }}"
+        run: pip install torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+      - if: "${{ hashFiles('remotion/src/medicine/alignment.json') == '' }}"
+        run: pip install stable-ts==2.19.1
+      - run: pip install fonttools pillow
       - name: Align approved narration and check fonts
         run: python scripts/medicine-align.py
       - uses: actions/upload-artifact@v4
@@ -56,3 +59,4 @@ jobs:
           name: medicine-preview
           path: remotion/out/medicine
           retention-days: 14
+

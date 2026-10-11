@@ -54,5 +54,6 @@
     "audio_listening": "NOT_RUN",
     "continuous_video_view": "NOT_RUN"
   },
-  "publication": "NOT_PUBLISHED"
+  "publication": "NOT_PUBLISHED",
+  "narration_sha256": "a51832443fb876b27ab1ffa1d01ee250854f2dee3666a2a9579a8296b0403b96"
 }

@@ -1,0 +1,58 @@
+{
+  "content_id": "ASF-20261011-001",
+  "script_revision": 1,
+  "status": "APPROVED",
+  "skill": "Remotion Video V2",
+  "skill_revision": "2026-10-11-elevenlabs-fonts",
+  "voice": {
+    "provider": "ElevenLabs",
+    "voice_id": "uvbatWHVYbcsrr3H6hIy",
+    "name": "Linh - Calm Northern Vietnamese",
+    "model": "eleven_v3",
+    "generation_id": "FtmfecULULDUBiB1QG3Q",
+    "duration_seconds": 35.2,
+    "generations": 1,
+    "popularity": "NOT_AVAILABLE"
+  },
+  "images": [
+    {
+      "file": "compare.png",
+      "provider": "builtin imagegen",
+      "prompt": "Use case: photorealistic-natural. Asset: vertical 9:16 photo illustration for Vietnamese medicine safety video. Natural editorial closeup overhead view on a pale wood table, two different generic unbranded medicine cartons, one cream with a teal stripe and one cream with an amber stripe, blank label areas with NO writing, alongside sealed silver tablet blister strips. One adult Vietnamese person's anatomically correct hands compares the two cartons without taking any pill. Both boxes fully visible in middle of portrait, realistic proportions, tactile cardboard, soft window light, navy background accents, believable contact shadows. No face, no extra fingers, no floating objects, no brand/logo, no text, no subtitles, no watermark. Leave upper third clean for later coded title. Illustrative scene, not documentary evidence.",
+      "review": "Viewed generated output: boxes, hands, texture, blank labels acceptable; AI illustration"
+    },
+    {
+      "file": "pharmacist.png",
+      "provider": "builtin imagegen",
+      "prompt": "Use case: photorealistic-natural. Asset: portrait 9:16 editorial photograph illustration for a Vietnamese medicine safety video. Vietnamese adult pharmacist woman in simple white coat, behind a clean pharmacy counter, helping an adult customer seen only from shoulder in navy sweater. Pharmacist carefully examines two generic cream medicine boxes, teal stripe and amber stripe, blank unbranded labels with no writing. Both hands and boxes clear, no tablet taken. Warm natural daylight, real skin texture, professional reassuring serious expression, shallow depth of field with softly blurred pharmacy shelves. Composition central interaction in middle half with generous negative space above. No readable text, no brands, no logos, no watermark, no plastic skin, no extra fingers, no distorted limbs. This is illustrative and not a real pharmacist endorsement.",
+      "review": "Viewed generated output: pharmacist, hand contact and two generic cartons acceptable; label rendered separately"
+    }
+  ],
+  "font": {
+    "name": "Noto Sans variable",
+    "license": "OFL.txt",
+    "path": "public/medicine/NotoSans-VF.ttf",
+    "weights": [
+      400,
+      600,
+      700,
+      800
+    ]
+  },
+  "sources": [
+    {
+      "title": "FDA Don't Overuse Acetaminophen",
+      "url": "https://www.fda.gov/consumers/consumer-updates/dont-overuse-acetaminophen"
+    },
+    {
+      "title": "NHS Paracetamol for adults",
+      "url": "https://www.nhs.uk/medicines/paracetamol-for-adults/"
+    }
+  ],
+  "review": {
+    "asset_view": "PASS",
+    "audio_listening": "NOT_RUN",
+    "continuous_video_view": "NOT_RUN"
+  },
+  "publication": "NOT_PUBLISHED"
+}

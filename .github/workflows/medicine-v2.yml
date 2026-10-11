@@ -36,3 +36,23 @@ jobs:
             remotion/out/medicine/preflight.json
           retention-days: 14
 
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.28.2
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: pnpm
+          cache-dependency-path: remotion/pnpm-lock.yaml
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm exec remotion browser ensure
+      - name: Compile composition
+        run: pnpm exec tsc --noEmit
+      - name: Render every scene and transition for QA
+        run: node scripts/medicine-frames.mjs
+      - run: python scripts/medicine-contact.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: medicine-preview
+          path: remotion/out/medicine
+          retention-days: 14

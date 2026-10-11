@@ -44,7 +44,9 @@ for phrase in ['Đang uống','Một số thuốc','Trên nhãn','Hai hộp','Qu
             starts.append(round(w['start']*30));break
         chars+=n
 timing=dict(durationInFrames=round(duration*30)+24,duration=duration,sceneStarts=starts,captions=captions,pages=[dict(startMs=p[0]['startMs'],endMs=p[-1]['endMs'],words=p) for p in pages])
+Path('src/medicine').mkdir(parents=True,exist_ok=True)
 Path('src/medicine/timing.json').write_text(json.dumps(timing,ensure_ascii=False,indent=2),encoding='utf-8')
 (OUT/'preflight.json').write_text(json.dumps(dict(font='Noto Sans VF OFL',NFC_NFD_glyphs='PASS',script_integrity='PASS',duration=duration,alignment='stable-ts small real audio',words=len(words)),ensure_ascii=False,indent=2))
 print(json.dumps(dict(duration=duration,starts=starts,pages=len(pages))))
+
 

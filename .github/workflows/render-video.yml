@@ -2,7 +2,7 @@ name: Render Remotion video
 
 on:
   push:
-    branches: [main]
+    branches: [main, storyboard-freezer-20261017]
     paths:
       - 'remotion/**'
       - 'AGENTS.md'
@@ -39,12 +39,23 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Install fonts
         run: sudo apt-get update && sudo apt-get install -y fonts-liberation fonts-dejavu-core
+      - name: Prepare freezer storyboard timing
+        if: github.ref_name == 'storyboard-freezer-20261017'
+        run: |
+          sudo apt-get update && sudo apt-get install -y ffmpeg python3-pil
+          python3 projects/freezer-storyboard/prepare.py
+          pnpm exec tsc --noEmit
       - name: Prepare browser
         run: pnpm exec remotion browser ensure
       - name: Render MP4 on GitHub
         env:
           COMPOSITION: ${{ inputs.composition }}
-        run: pnpm exec remotion render src/index.ts "${COMPOSITION:-MealWalkKnowledgeR3}" out/video.mp4 --codec=h264 --concurrency=2
+        run: |
+          if [ "$GITHUB_REF_NAME" = "storyboard-freezer-20261017" ]; then COMPOSITION=FreezerStoryboardV1; fi
+          pnpm exec remotion render src/index.ts "${COMPOSITION:-MealWalkKnowledgeR3}" out/video.mp4 --codec=h264 --audio-codec=aac --concurrency=2
+      - name: Full freezer storyboard checks
+        if: github.ref_name == 'storyboard-freezer-20261017'
+        run: python3 projects/freezer-storyboard/qa.py
       - name: Check MP4 and extract representative frames
         run: |
           sudo apt-get update && sudo apt-get install -y ffmpeg
@@ -72,6 +83,10 @@ jobs:
           path: |
             remotion/out/frames/*.png
             remotion/out/metadata.json
+            remotion/out/contact-sheet-*.jpg
+            remotion/out/production-manifest.json
+            remotion/out/audio-review.m4a
+            remotion/out/blackdetect.log
           if-no-files-found: error
           retention-days: 14
       - name: Downloadable video

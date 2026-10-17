@@ -1,0 +1,436 @@
+{
+  "project_id": "freezer-storyboard-20261017",
+  "revision": 1,
+  "source_format": "pdf",
+  "source_path_or_chat_reference": "Original user-attached PDF",
+  "source_snapshot_path": "projects/freezer-storyboard/source-storyboard.pdf",
+  "source_sha256": "2eda3e5193e4f2a46ab23d341fb6422ccb49287df80670347d232292371066e5",
+  "approval_reference": [
+    "User: giu nguyen loi thoai",
+    "User: cho phep tang thoi luong tung canh cho phu hop"
+  ],
+  "fps": 30,
+  "duration_frames": 1513,
+  "output_width": 1080,
+  "output_height": 1920,
+  "visual_bible": {
+    "characters": "Vietnamese adult hands only when needed; natural anatomy, clean short nails; no visible face",
+    "objects": "Scene 1 freezer-burned beef; scenes 3-6 pork, intentionally distinct from beef; thin bag then plastic wrap then zip bags and dated container",
+    "locations": "Consistent domestic Vietnamese kitchen with light neutral counter and white freezer interior",
+    "palette": "Cold desaturated blue-gray for problem, clean natural neutral for solutions, warm cooked-dish finale",
+    "light": "Dramatic freezer macro then bright clean kitchen light, warm finale",
+    "intentional_changes": [
+      "beef in hook versus pork in solution",
+      "damaged versus properly packaged portions",
+      "raw/thawed versus cooked"
+    ],
+    "anchor_assets": [
+      "public/freezer/scene-01-anchor.png"
+    ]
+  },
+  "voice": {
+    "random_draw": 0,
+    "selected_name": "Clara Tran Vietnamese Standard",
+    "verified_voice_id": "jlF8iBnNc6M1ZP5hRcRw",
+    "model": "eleven_v3",
+    "speed_requested": 1.2,
+    "speed_applied": "default (user explicitly approved)",
+    "capability_evidence": "Connected V3 tts schema exposes voice_id and language_code only; generate_speech has no speed; get_more_tools confirms no additional supported tool",
+    "speed_approved": "default; user approved explicitly",
+    "flow_id": "nqy4JcPyTLIt9S4qzx5g"
+  },
+  "preflight": {
+    "checked_at": "2026-10-17",
+    "login_status": "Flow signed in; reference uploaded successfully",
+    "planned_generations": {
+      "video": 1,
+      "images": 6,
+      "audio": 6
+    },
+    "approvals": [
+      "Narration unchanged",
+      "Scene duration may increase",
+      "V3 default speed explicitly approved"
+    ],
+    "blockers": [],
+    "observed_flow_model": "Veo 3.1 - Lite",
+    "observed_flow_aspect": "9:16"
+  },
+  "scenes": [
+    {
+      "id": "scene-01",
+      "original_start_frame": 0,
+      "original_end_frame_exclusive": 90,
+      "start_frame": 0,
+      "end_frame_exclusive": 191,
+      "resource_type": "video",
+      "approved_description": "🎬 [VIDEO AI](Đáng đầu tư credit)[HOOK GÂY SỐC]Cận cảnh miếng thịt bò để quên trong tủ đông bị khô cứng, cháy lạnh (freezer burn), đốm trắng xám đáng sợ.",
+      "approved_visual_prompt": "Extreme close-up macro shot, a piece of meat suffering from freezer burn, dry and frost-covered inside a freezer, cinematic dramatic lighting, 9:16 vertical, 3 sec motion.",
+      "approved_narration": "Đừng bao giờ vứt thịt cá trực tiếp vào ngăn đá nếu không muốn miếng thịt khô khốc, mất hết chất dinh dưỡng!",
+      "delivery_notes": "Vietnamese, expressive, brisk pacing",
+      "approved_effects": "Text overlay nảy (Spring); rung màn hình nhẹ",
+      "overlay_text": "ĐỪNG CẤT THỊT VÀO NGĂN ĐÁ KIỂU NÀY!",
+      "reference_asset_ids": [
+        "freezer/scene-01-anchor.png"
+      ],
+      "asset_path": "freezer/scene-01.mp4",
+      "flow_project_url": "https://flow.google.com/project/2ceafd6a-5453-424f-93ab-83afd1e510d0/edit/90a074fd-f823-4811-9f22-2c22c0a164eb",
+      "observed_model": "Veo 3.1 - Lite",
+      "native_resolution": [
+        720,
+        1280
+      ],
+      "export_resolution": [
+        1080,
+        1920
+      ],
+      "upscaled": true,
+      "audio_path": "freezer/scene-01.mp3",
+      "measured_audio_duration": 6,
+      "subtitle_cues": [
+        {
+          "text": "Đừng bao giờ vứt thịt cá trực",
+          "startMs": 0,
+          "endMs": 1520,
+          "timestampMs": null,
+          "confidence": null
+        },
+        {
+          "text": "tiếp vào ngăn đá nếu không muốn",
+          "startMs": 1552,
+          "endMs": 3440,
+          "timestampMs": null,
+          "confidence": null
+        },
+        {
+          "text": "miếng thịt khô khốc, mất hết chất",
+          "startMs": 3493,
+          "endMs": 5280,
+          "timestampMs": null,
+          "confidence": null
+        },
+        {
+          "text": "dinh dưỡng!",
+          "startMs": 5328,
+          "endMs": 6000,
+          "timestampMs": null,
+          "confidence": null
+        }
+      ],
+      "qa_status": "pending_final_render",
+      "audio_duration_evidence": "ElevenLabs completed generation duration_secs; local probe still pending",
+      "audio_generation_id": "IyiFN8aSj8KJpnfdZWSq"
+    },
+    {
+      "id": "scene-02",
+      "original_start_frame": 90,
+      "original_end_frame_exclusive": 240,
+      "start_frame": 191,
+      "end_frame_exclusive": 399,
+      "resource_type": "image",
+      "approved_description": "🖼 [ẢNH TĨNH](Tiết kiệm credit)[PROBLEM]Cảnh gói thịt ném vào túi nilon mỏng cột thun sơ sài bỏ vào tủ đông.",
+      "approved_visual_prompt": "Close-up shot, a piece of raw meat wrapped poorly in a thin plastic bag, messy freezer background, photorealistic, 4k, 9:16 vertical.",
+      "approved_narration": "Sai lầm phổ biến là dùng túi nilon thông thường, khiến không khí lọt vào và làm thịt bị thâm đen chỉ sau vài ngày.",
+      "delivery_notes": "Vietnamese, expressive, brisk pacing",
+      "approved_effects": "Freeze frame + Hiệu ứng xám nhẹ.- Text: Sai lầm: Dùng túi nilon mỏng!",
+      "overlay_text": null,
+      "reference_asset_ids": [
+        "freezer/scene-01-anchor.png"
+      ],
+      "asset_path": "freezer/scene-02.png",
+      "flow_project_url": null,
+      "observed_model": null,
+      "native_resolution": null,
+      "export_resolution": [
+        1080,
+        1920
+      ],
+      "upscaled": false,
+      "audio_path": "freezer/scene-02.mp3",
+      "measured_audio_duration": 6.56,
+      "subtitle_cues": [
+        {
+          "text": "Sai lầm phổ biến là dùng túi",
+          "startMs": 0,
+          "endMs": 1360,
+          "timestampMs": null,
+          "confidence": null
+        },
+        {
+          "text": "nilon thông thường, khiến không khí lọt",
+          "startMs": 1440,
+          "endMs": 3600,
+          "timestampMs": null,
+          "confidence": null
+        },
+        {
+          "text": "vào và làm thịt bị thâm đen",
+          "startMs": 3680,
+          "endMs": 5360,
+          "timestampMs": null,
+          "confidence": null
+        },
+        {
+          "text": "chỉ sau vài ngày.",
+          "startMs": 5420,
+          "endMs": 6560,
+          "timestampMs": null,
+          "confidence": null
+        }
+      ],
+      "qa_status": "pending_final_render",
+      "audio_duration_evidence": "ElevenLabs completed generation duration_secs; local probe still pending",
+      "audio_generation_id": "DmWo0FfaF5zU10puEWc0"
+    },
+    {
+      "id": "scene-03",
+      "original_start_frame": 240,
+      "original_end_frame_exclusive": 540,
+      "start_frame": 399,
+      "end_frame_exclusive": 699,
+      "resource_type": "image",
+      "approved_description": "🖼 [ẢNH TĨNH](Tiết kiệm credit)[SOLUTION 1: MẸO BỌC MÀNG BỌC + TÚI ZIP]Tay đang quấn chặt từng miếng thịt bằng màng bọc thực phẩm (Plastic wrap) thật khít.",
+      "approved_visual_prompt": "Macro cinematic shot, wrapping a fresh portion of pork tightly in clear plastic wrap (vacuum style), clean kitchen counter, studio lighting, 4k, 9:16.",
+      "approved_narration": "Mẹo chuẩn chuyên gia: Hãy quấn chặt từng miếng thịt qua nhiều lớp màng bọc thực phẩm để loại bỏ hoàn toàn không khí.",
+      "delivery_notes": "Vietnamese, expressive, brisk pacing",
+      "approved_effects": "Progress bar chạy góc dưới.- Text: Mẹo 1: Quấn kín bằng màng bọc thực phẩm",
+      "overlay_text": null,
+      "reference_asset_ids": [
+        "freezer/scene-02.png"
+      ],
+      "asset_path": "freezer/scene-03.png",
+      "flow_project_url": null,
+      "observed_model": null,
+      "native_resolution": null,
+      "export_resolution": [
+        1080,
+        1920
+      ],
+      "upscaled": false,
+      "audio_path": "freezer/scene-03.mp3",
+      "measured_audio_duration": 7.04,
+      "subtitle_cues": [
+        {
+          "text": "Mẹo chuẩn chuyên gia: Hãy quấn chặt",
+          "startMs": 0,
+          "endMs": 2240,
+          "timestampMs": null,
+          "confidence": null
+        },
+        {
+          "text": "từng miếng thịt qua nhiều lớp màng",
+          "startMs": 2288,
+          "endMs": 4080,
+          "timestampMs": null,
+          "confidence": null
+        },
+        {
+          "text": "bọc thực phẩm để loại bỏ hoàn",
+          "startMs": 4120,
+          "endMs": 6000,
+          "timestampMs": null,
+          "confidence": null
+        },
+        {
+          "text": "toàn không khí.",
+          "startMs": 6048,
+          "endMs": 7040,
+          "timestampMs": null,
+          "confidence": null
+        }
+      ],
+      "qa_status": "pending_final_render",
+      "audio_duration_evidence": "ElevenLabs completed generation duration_secs; local probe still pending",
+      "audio_generation_id": "oRm7D4LDEKXU7t3nRu4t"
+    },
+    {
+      "id": "scene-04",
+      "original_start_frame": 540,
+      "original_end_frame_exclusive": 840,
+      "start_frame": 699,
+      "end_frame_exclusive": 999,
+      "resource_type": "image",
+      "approved_description": "🖼 [ẢNH TĨNH](Tiết kiệm credit)[SOLUTION 2: CẤP ĐÔNG NHANH & DÁN NHÃN]Đưa các gói thịt đã bọc gọn gàng vào hộp trữ đông, có dán nhãn ngày tháng rõ ràng.",
+      "approved_visual_prompt": "Professional food styling shot, neatly organized meat portions sealed in zip bags inside a clean freezer container with date labels, bright lighting, 4k, 9:16.",
+      "approved_narration": "Sau đó, cho vào túi zip hoặc hộp kín và ghi rõ ngày tháng. Cách này giúp thịt giữ nguyên độ tươi ngon suốt hàng tháng trời.",
+      "delivery_notes": "Vietnamese, expressive, brisk pacing",
+      "approved_effects": "Hiệu ứng chuyển cảnh Wipe.- Text: Mẹo 2: Trữ đông trong hộp kín / túi zip",
+      "overlay_text": null,
+      "reference_asset_ids": [
+        "freezer/scene-03.png"
+      ],
+      "asset_path": "freezer/scene-04.png",
+      "flow_project_url": null,
+      "observed_model": null,
+      "native_resolution": null,
+      "export_resolution": [
+        1080,
+        1920
+      ],
+      "upscaled": false,
+      "audio_path": "freezer/scene-04.mp3",
+      "measured_audio_duration": 8.08,
+      "subtitle_cues": [
+        {
+          "text": "Sau đó, cho vào túi zip hoặc",
+          "startMs": 0,
+          "endMs": 2000,
+          "timestampMs": null,
+          "confidence": null
+        },
+        {
+          "text": "hộp kín và ghi rõ ngày tháng.",
+          "startMs": 2040,
+          "endMs": 4080,
+          "timestampMs": null,
+          "confidence": null
+        },
+        {
+          "text": "Cách này giúp thịt giữ nguyên độ",
+          "startMs": 4224,
+          "endMs": 6320,
+          "timestampMs": null,
+          "confidence": null
+        },
+        {
+          "text": "tươi ngon suốt hàng tháng trời.",
+          "startMs": 6368,
+          "endMs": 8080,
+          "timestampMs": null,
+          "confidence": null
+        }
+      ],
+      "qa_status": "pending_final_render",
+      "audio_duration_evidence": "ElevenLabs completed generation duration_secs; local probe still pending",
+      "audio_generation_id": "xQrEBnOdU4Xr2E7xBAKt"
+    },
+    {
+      "id": "scene-05",
+      "original_start_frame": 840,
+      "original_end_frame_exclusive": 1110,
+      "start_frame": 999,
+      "end_frame_exclusive": 1269,
+      "resource_type": "image",
+      "approved_description": "🖼 [ẢNH TĨNH](Tiết kiệm credit)[RESULT - MÃN NHÃN]Miếng thịt sau khi rã đông vẫn giữ nguyên màu đỏ hồng tươi rói, thớ thịt mọng nước.",
+      "approved_visual_prompt": "Aesthetic close-up macro shot of freshly thawed meat, pink color, moist and juicy texture, professional lighting, 4k, 9:16 vertical.",
+      "approved_narration": "Nhìn này! Khi rã đông, thịt vẫn giữ nguyên màu đỏ hồng, mềm mọng nước như vừa mua ở chợ về.",
+      "delivery_notes": "Vietnamese, expressive, brisk pacing",
+      "approved_effects": "Hiệu ứng Ken Burns (Zoom in nhẹ vào ảnh tĩnh)- Text: Thịt tươi ngon như mới mua!",
+      "overlay_text": null,
+      "reference_asset_ids": [
+        "freezer/scene-04.png"
+      ],
+      "asset_path": "freezer/scene-05.png",
+      "flow_project_url": null,
+      "observed_model": null,
+      "native_resolution": null,
+      "export_resolution": [
+        1080,
+        1920
+      ],
+      "upscaled": false,
+      "audio_path": "freezer/scene-05.mp3",
+      "measured_audio_duration": 6.64,
+      "subtitle_cues": [
+        {
+          "text": "Nhìn này! Khi rã đông, thịt vẫn",
+          "startMs": 0,
+          "endMs": 2320,
+          "timestampMs": null,
+          "confidence": null
+        },
+        {
+          "text": "giữ nguyên màu đỏ hồng, mềm mọng",
+          "startMs": 2360,
+          "endMs": 4560,
+          "timestampMs": null,
+          "confidence": null
+        },
+        {
+          "text": "nước như vừa mua ở chợ về.",
+          "startMs": 4640,
+          "endMs": 6640,
+          "timestampMs": null,
+          "confidence": null
+        }
+      ],
+      "qa_status": "pending_final_render",
+      "audio_duration_evidence": "ElevenLabs completed generation duration_secs; local probe still pending",
+      "audio_generation_id": "aeaNxpIeOUZ4CeBOzv7W"
+    },
+    {
+      "id": "scene-06",
+      "original_start_frame": 1110,
+      "original_end_frame_exclusive": 1350,
+      "start_frame": 1269,
+      "end_frame_exclusive": 1513,
+      "resource_type": "image",
+      "approved_description": "🖼 [ẢNH TĨNH](Tiết kiệm credit)[CALL TO ACTION]Món ăn chế biến từ thịt ngon mắt kèm biểu tượng Follow.",
+      "approved_visual_prompt": "Appetizing cooked dish made from fresh pork, steam rising, warm cinematic lighting, viral TikTok food style, 4k, 9:16 vertical.",
+      "approved_narration": "Áp dụng ngay mẹo nhỏ này để bữa ăn gia đình luôn chuẩn vị nhé! Bấm Follow kênh để xem thêm nhiều mẹo hay mỗi ngày!",
+      "delivery_notes": "Vietnamese, expressive, brisk pacing",
+      "approved_effects": "Animated Follow Button xuất hiện.- Mũi tên chỉ vào Avatar.",
+      "overlay_text": null,
+      "reference_asset_ids": [
+        "freezer/scene-05.png"
+      ],
+      "asset_path": "freezer/scene-06.png",
+      "flow_project_url": null,
+      "observed_model": null,
+      "native_resolution": null,
+      "export_resolution": [
+        1080,
+        1920
+      ],
+      "upscaled": false,
+      "audio_path": "freezer/scene-06.mp3",
+      "measured_audio_duration": 7.76,
+      "subtitle_cues": [
+        {
+          "text": "Áp dụng ngay mẹo nhỏ này để",
+          "startMs": 0,
+          "endMs": 1840,
+          "timestampMs": null,
+          "confidence": null
+        },
+        {
+          "text": "bữa ăn gia đình luôn chuẩn vị",
+          "startMs": 1880,
+          "endMs": 3360,
+          "timestampMs": null,
+          "confidence": null
+        },
+        {
+          "text": "nhé! Bấm Follow kênh để xem thêm",
+          "startMs": 3420,
+          "endMs": 6160,
+          "timestampMs": null,
+          "confidence": null
+        },
+        {
+          "text": "nhiều mẹo hay mỗi ngày!",
+          "startMs": 6200,
+          "endMs": 7760,
+          "timestampMs": null,
+          "confidence": null
+        }
+      ],
+      "qa_status": "pending_final_render",
+      "audio_duration_evidence": "ElevenLabs completed generation duration_secs; local probe still pending",
+      "audio_generation_id": "0EsezDlvwtdPrcOScfTd"
+    }
+  ],
+  "delivery": {
+    "render_environment": "github-actions",
+    "repository": "trungtn288-ctrl/tao-video",
+    "repository_directory": "remotion",
+    "render_status": "prepared",
+    "mp4_path": null,
+    "metadata": null,
+    "qa_frames": [],
+    "audio_review": "pending",
+    "unresolved_issues": [
+      "Original factual claims retained by user request; source video native 720p"
+    ]
+  }
+}

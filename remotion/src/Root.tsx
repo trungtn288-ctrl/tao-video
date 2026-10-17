@@ -1,3 +1,5 @@
+import { FreezerStoryboard } from './freezer/FreezerStoryboard';
+import freezerTiming from './freezer/timing.json';
 import { MedicineSafetyV2 } from './medicine/MedicineSafetyV2';
 import medicineTiming from './medicine/timing.json';
 import { Composition, Folder } from "remotion";
@@ -25,6 +27,7 @@ import { R3Scene09 } from "./r3/Scene09";
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      <Composition id="FreezerStoryboardV1" component={FreezerStoryboard} durationInFrames={freezerTiming.duration_frames} fps={30} width={1080} height={1920} />
       <Composition id="MedicineSafetyV2" component={MedicineSafetyV2} durationInFrames={medicineTiming.durationInFrames} fps={30} width={1080} height={1920} />
       <Composition
         id="MealWalkKnowledgeR3"

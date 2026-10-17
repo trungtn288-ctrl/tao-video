@@ -1,0 +1,926 @@
+[
+  {
+    "generation_id": "fRFzsFyNnQmVAgIl0ivN",
+    "text": "Đừng bao giờ vứt thịt cá trực tiếp vào ngăn đá nếu không muốn miếng thịt khô khốc, mất hết chất dinh dưỡng!",
+    "model_id": "eleven_scribe_v1",
+    "words": [
+      {
+        "text": "Đừng",
+        "type": "word",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "bao",
+        "type": "word",
+        "start": 0.22,
+        "end": 0.4
+      },
+      {
+        "text": "giờ",
+        "type": "word",
+        "start": 0.44,
+        "end": 0.56
+      },
+      {
+        "text": "vứt",
+        "type": "word",
+        "start": 0.64,
+        "end": 0.8
+      },
+      {
+        "text": "thịt",
+        "type": "word",
+        "start": 0.848,
+        "end": 1.04
+      },
+      {
+        "text": "cá",
+        "type": "word",
+        "start": 1.12,
+        "end": 1.28
+      },
+      {
+        "text": "trực",
+        "type": "word",
+        "start": 1.328,
+        "end": 1.52
+      },
+      {
+        "text": "tiếp",
+        "type": "word",
+        "start": 1.552,
+        "end": 1.68
+      },
+      {
+        "text": "vào",
+        "type": "word",
+        "start": 1.72,
+        "end": 1.84
+      },
+      {
+        "text": "ngăn",
+        "type": "word",
+        "start": 1.872,
+        "end": 2
+      },
+      {
+        "text": "đá",
+        "type": "word",
+        "start": 2.107,
+        "end": 2.32
+      },
+      {
+        "text": "nếu",
+        "type": "word",
+        "start": 2.48,
+        "end": 2.96
+      },
+      {
+        "text": "không",
+        "type": "word",
+        "start": 3,
+        "end": 3.2
+      },
+      {
+        "text": "muốn",
+        "type": "word",
+        "start": 3.248,
+        "end": 3.44
+      },
+      {
+        "text": "miếng",
+        "type": "word",
+        "start": 3.493,
+        "end": 3.68
+      },
+      {
+        "text": "thịt",
+        "type": "word",
+        "start": 3.728,
+        "end": 3.92
+      },
+      {
+        "text": "khô",
+        "type": "word",
+        "start": 3.98,
+        "end": 4.16
+      },
+      {
+        "text": "khốc,",
+        "type": "word",
+        "start": 4.213,
+        "end": 4.48
+      },
+      {
+        "text": "mất",
+        "type": "word",
+        "start": 4.58,
+        "end": 4.88
+      },
+      {
+        "text": "hết",
+        "type": "word",
+        "start": 4.94,
+        "end": 5.12
+      },
+      {
+        "text": "chất",
+        "type": "word",
+        "start": 5.152,
+        "end": 5.28
+      },
+      {
+        "text": "dinh",
+        "type": "word",
+        "start": 5.328,
+        "end": 5.52
+      },
+      {
+        "text": "dưỡng!",
+        "type": "word",
+        "start": 5.573,
+        "end": 6
+      }
+    ],
+    "spoken_duration_secs": 6
+  },
+  {
+    "generation_id": "m0pVgP6dTrRaXe5UX4Vr",
+    "text": "Sai lầm phổ biến là dùng túi nilon thông thường, khiến không khí lọt vào và làm thịt bị thâm đen chỉ sau vài ngày.",
+    "model_id": "eleven_scribe_v1",
+    "words": [
+      {
+        "text": "Sai",
+        "type": "word",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "lầm",
+        "type": "word",
+        "start": 0.2,
+        "end": 0.32
+      },
+      {
+        "text": "phổ",
+        "type": "word",
+        "start": 0.38,
+        "end": 0.56
+      },
+      {
+        "text": "biến",
+        "type": "word",
+        "start": 0.608,
+        "end": 0.8
+      },
+      {
+        "text": "là",
+        "type": "word",
+        "start": 0.853,
+        "end": 0.96
+      },
+      {
+        "text": "dùng",
+        "type": "word",
+        "start": 1.008,
+        "end": 1.2
+      },
+      {
+        "text": "túi",
+        "type": "word",
+        "start": 1.24,
+        "end": 1.36
+      },
+      {
+        "text": "nilon",
+        "type": "word",
+        "start": 1.44,
+        "end": 1.76
+      },
+      {
+        "text": "thông",
+        "type": "word",
+        "start": 1.8,
+        "end": 2
+      },
+      {
+        "text": "thường,",
+        "type": "word",
+        "start": 2.046,
+        "end": 2.64
+      },
+      {
+        "text": "khiến",
+        "type": "word",
+        "start": 2.68,
+        "end": 2.88
+      },
+      {
+        "text": "không",
+        "type": "word",
+        "start": 2.907,
+        "end": 3.04
+      },
+      {
+        "text": "khí",
+        "type": "word",
+        "start": 3.1,
+        "end": 3.28
+      },
+      {
+        "text": "lọt",
+        "type": "word",
+        "start": 3.36,
+        "end": 3.6
+      },
+      {
+        "text": "vào",
+        "type": "word",
+        "start": 3.68,
+        "end": 3.92
+      },
+      {
+        "text": "và",
+        "type": "word",
+        "start": 4,
+        "end": 4.16
+      },
+      {
+        "text": "làm",
+        "type": "word",
+        "start": 4.22,
+        "end": 4.4
+      },
+      {
+        "text": "thịt",
+        "type": "word",
+        "start": 4.448,
+        "end": 4.64
+      },
+      {
+        "text": "bị",
+        "type": "word",
+        "start": 4.693,
+        "end": 4.8
+      },
+      {
+        "text": "thâm",
+        "type": "word",
+        "start": 4.827,
+        "end": 4.96
+      },
+      {
+        "text": "đen",
+        "type": "word",
+        "start": 5.06,
+        "end": 5.36
+      },
+      {
+        "text": "chỉ",
+        "type": "word",
+        "start": 5.42,
+        "end": 5.6
+      },
+      {
+        "text": "sau",
+        "type": "word",
+        "start": 5.66,
+        "end": 5.84
+      },
+      {
+        "text": "vài",
+        "type": "word",
+        "start": 5.88,
+        "end": 6
+      },
+      {
+        "text": "ngày.",
+        "type": "word",
+        "start": 6.08,
+        "end": 6.56
+      }
+    ],
+    "spoken_duration_secs": 6.56
+  },
+  {
+    "generation_id": "nc0krhVuJQoCd3bL2dAA",
+    "text": "Mẹo chuẩn chuyên gia: Hãy quấn chặt từng miếng thịt qua nhiều lớp màng bọc thực phẩm để loại bỏ hoàn toàn không khí.",
+    "model_id": "eleven_scribe_v1",
+    "words": [
+      {
+        "text": "Mẹo",
+        "type": "word",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "text": "chuẩn",
+        "type": "word",
+        "start": 0.28,
+        "end": 0.48
+      },
+      {
+        "text": "chuyên",
+        "type": "word",
+        "start": 0.526,
+        "end": 0.8
+      },
+      {
+        "text": "gia:",
+        "type": "word",
+        "start": 0.88,
+        "end": 1.28
+      },
+      {
+        "text": "Hãy",
+        "type": "word",
+        "start": 1.38,
+        "end": 1.68
+      },
+      {
+        "text": "quấn",
+        "type": "word",
+        "start": 1.733,
+        "end": 1.92
+      },
+      {
+        "text": "chặt",
+        "type": "word",
+        "start": 1.984,
+        "end": 2.24
+      },
+      {
+        "text": "từng",
+        "type": "word",
+        "start": 2.288,
+        "end": 2.48
+      },
+      {
+        "text": "miếng",
+        "type": "word",
+        "start": 2.533,
+        "end": 2.72
+      },
+      {
+        "text": "thịt",
+        "type": "word",
+        "start": 2.768,
+        "end": 2.96
+      },
+      {
+        "text": "qua",
+        "type": "word",
+        "start": 3.04,
+        "end": 3.28
+      },
+      {
+        "text": "nhiều",
+        "type": "word",
+        "start": 3.333,
+        "end": 3.6
+      },
+      {
+        "text": "lớp",
+        "type": "word",
+        "start": 3.66,
+        "end": 3.84
+      },
+      {
+        "text": "màng",
+        "type": "word",
+        "start": 3.88,
+        "end": 4.08
+      },
+      {
+        "text": "bọc",
+        "type": "word",
+        "start": 4.12,
+        "end": 4.24
+      },
+      {
+        "text": "thực",
+        "type": "word",
+        "start": 4.288,
+        "end": 4.48
+      },
+      {
+        "text": "phẩm",
+        "type": "word",
+        "start": 4.528,
+        "end": 4.72
+      },
+      {
+        "text": "để",
+        "type": "word",
+        "start": 4.88,
+        "end": 5.2
+      },
+      {
+        "text": "loại",
+        "type": "word",
+        "start": 5.248,
+        "end": 5.44
+      },
+      {
+        "text": "bỏ",
+        "type": "word",
+        "start": 5.52,
+        "end": 5.68
+      },
+      {
+        "text": "hoàn",
+        "type": "word",
+        "start": 5.744,
+        "end": 6
+      },
+      {
+        "text": "toàn",
+        "type": "word",
+        "start": 6.048,
+        "end": 6.24
+      },
+      {
+        "text": "không",
+        "type": "word",
+        "start": 6.28,
+        "end": 6.48
+      },
+      {
+        "text": "khí.",
+        "type": "word",
+        "start": 6.58,
+        "end": 7.04
+      }
+    ],
+    "spoken_duration_secs": 7.04
+  },
+  {
+    "generation_id": "BVeheXR43HBB9HJSFWLU",
+    "text": "Sau đó, cho vào túi zip hoặc hộp kín và ghi rõ ngày tháng. Cách này giúp thịt giữ nguyên độ tươi ngon suốt hàng tháng trời.",
+    "model_id": "eleven_scribe_v1",
+    "words": [
+      {
+        "text": "Sau",
+        "type": "word",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "đó,",
+        "type": "word",
+        "start": 0.293,
+        "end": 0.64
+      },
+      {
+        "text": "cho",
+        "type": "word",
+        "start": 0.74,
+        "end": 1.04
+      },
+      {
+        "text": "vào",
+        "type": "word",
+        "start": 1.08,
+        "end": 1.2
+      },
+      {
+        "text": "túi",
+        "type": "word",
+        "start": 1.26,
+        "end": 1.44
+      },
+      {
+        "text": "zip",
+        "type": "word",
+        "start": 1.52,
+        "end": 1.76
+      },
+      {
+        "text": "hoặc",
+        "type": "word",
+        "start": 1.808,
+        "end": 2
+      },
+      {
+        "text": "hộp",
+        "type": "word",
+        "start": 2.04,
+        "end": 2.16
+      },
+      {
+        "text": "kín",
+        "type": "word",
+        "start": 2.24,
+        "end": 2.56
+      },
+      {
+        "text": "và",
+        "type": "word",
+        "start": 2.693,
+        "end": 2.96
+      },
+      {
+        "text": "ghi",
+        "type": "word",
+        "start": 3.02,
+        "end": 3.2
+      },
+      {
+        "text": "rõ",
+        "type": "word",
+        "start": 3.28,
+        "end": 3.44
+      },
+      {
+        "text": "ngày",
+        "type": "word",
+        "start": 3.472,
+        "end": 3.6
+      },
+      {
+        "text": "tháng.",
+        "type": "word",
+        "start": 3.667,
+        "end": 4.08
+      },
+      {
+        "text": "Cách",
+        "type": "word",
+        "start": 4.224,
+        "end": 4.8
+      },
+      {
+        "text": "này",
+        "type": "word",
+        "start": 4.88,
+        "end": 5.12
+      },
+      {
+        "text": "giúp",
+        "type": "word",
+        "start": 5.2,
+        "end": 5.52
+      },
+      {
+        "text": "thịt",
+        "type": "word",
+        "start": 5.568,
+        "end": 5.76
+      },
+      {
+        "text": "giữ",
+        "type": "word",
+        "start": 5.8,
+        "end": 5.92
+      },
+      {
+        "text": "nguyên",
+        "type": "word",
+        "start": 5.954,
+        "end": 6.16
+      },
+      {
+        "text": "độ",
+        "type": "word",
+        "start": 6.213,
+        "end": 6.32
+      },
+      {
+        "text": "tươi",
+        "type": "word",
+        "start": 6.368,
+        "end": 6.56
+      },
+      {
+        "text": "ngon",
+        "type": "word",
+        "start": 6.608,
+        "end": 6.8
+      },
+      {
+        "text": "suốt",
+        "type": "word",
+        "start": 6.848,
+        "end": 7.04
+      },
+      {
+        "text": "hàng",
+        "type": "word",
+        "start": 7.072,
+        "end": 7.2
+      },
+      {
+        "text": "tháng",
+        "type": "word",
+        "start": 7.253,
+        "end": 7.52
+      },
+      {
+        "text": "trời.",
+        "type": "word",
+        "start": 7.6,
+        "end": 8.08
+      }
+    ],
+    "spoken_duration_secs": 8.08
+  },
+  {
+    "generation_id": "CH4GIWraSXEpIzRmQm3M",
+    "text": "Nhìn này! Khi rã đông, thịt vẫn giữ nguyên màu đỏ hồng, mềm mọng nước như vừa mua ở chợ về.",
+    "model_id": "eleven_scribe_v1",
+    "words": [
+      {
+        "text": "Nhìn",
+        "type": "word",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "này!",
+        "type": "word",
+        "start": 0.24,
+        "end": 0.64
+      },
+      {
+        "text": "Khi",
+        "type": "word",
+        "start": 0.76,
+        "end": 1.12
+      },
+      {
+        "text": "rã",
+        "type": "word",
+        "start": 1.2,
+        "end": 1.44
+      },
+      {
+        "text": "đông,",
+        "type": "word",
+        "start": 1.472,
+        "end": 1.92
+      },
+      {
+        "text": "thịt",
+        "type": "word",
+        "start": 1.952,
+        "end": 2.08
+      },
+      {
+        "text": "vẫn",
+        "type": "word",
+        "start": 2.14,
+        "end": 2.32
+      },
+      {
+        "text": "giữ",
+        "type": "word",
+        "start": 2.36,
+        "end": 2.48
+      },
+      {
+        "text": "nguyên",
+        "type": "word",
+        "start": 2.526,
+        "end": 2.8
+      },
+      {
+        "text": "màu",
+        "type": "word",
+        "start": 2.86,
+        "end": 3.04
+      },
+      {
+        "text": "đỏ",
+        "type": "word",
+        "start": 3.12,
+        "end": 3.28
+      },
+      {
+        "text": "hồng,",
+        "type": "word",
+        "start": 3.328,
+        "end": 3.92
+      },
+      {
+        "text": "mềm",
+        "type": "word",
+        "start": 4,
+        "end": 4.24
+      },
+      {
+        "text": "mọng",
+        "type": "word",
+        "start": 4.36,
+        "end": 4.56
+      },
+      {
+        "text": "nước",
+        "type": "word",
+        "start": 4.64,
+        "end": 4.96
+      },
+      {
+        "text": "như",
+        "type": "word",
+        "start": 5.02,
+        "end": 5.2
+      },
+      {
+        "text": "vừa",
+        "type": "word",
+        "start": 5.26,
+        "end": 5.44
+      },
+      {
+        "text": "mua",
+        "type": "word",
+        "start": 5.5,
+        "end": 5.68
+      },
+      {
+        "text": "ở",
+        "type": "word",
+        "start": 5.76,
+        "end": 5.84
+      },
+      {
+        "text": "chợ",
+        "type": "word",
+        "start": 5.893,
+        "end": 6.08
+      },
+      {
+        "text": "về.",
+        "type": "word",
+        "start": 6.187,
+        "end": 6.64
+      }
+    ],
+    "spoken_duration_secs": 6.64
+  },
+  {
+    "generation_id": "r7hGERc5jppKRmFB6WqT",
+    "text": "Áp dụng ngay mẹo nhỏ này để bữa ăn gia đình luôn chuẩn vị nhé! Bấm Follow kênh để xem thêm nhiều mẹo hay mỗi ngày!",
+    "model_id": "eleven_scribe_v1",
+    "words": [
+      {
+        "text": "Áp",
+        "type": "word",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "text": "dụng",
+        "type": "word",
+        "start": 0.208,
+        "end": 0.4
+      },
+      {
+        "text": "ngay",
+        "type": "word",
+        "start": 0.432,
+        "end": 0.56
+      },
+      {
+        "text": "mẹo",
+        "type": "word",
+        "start": 0.64,
+        "end": 0.92
+      },
+      {
+        "text": "nhỏ",
+        "type": "word",
+        "start": 0.95,
+        "end": 1.04
+      },
+      {
+        "text": "này",
+        "type": "word",
+        "start": 1.12,
+        "end": 1.36
+      },
+      {
+        "text": "để",
+        "type": "word",
+        "start": 1.52,
+        "end": 1.84
+      },
+      {
+        "text": "bữa",
+        "type": "word",
+        "start": 1.88,
+        "end": 2
+      },
+      {
+        "text": "ăn",
+        "type": "word",
+        "start": 2.053,
+        "end": 2.16
+      },
+      {
+        "text": "gia",
+        "type": "word",
+        "start": 2.2,
+        "end": 2.32
+      },
+      {
+        "text": "đình",
+        "type": "word",
+        "start": 2.384,
+        "end": 2.64
+      },
+      {
+        "text": "luôn",
+        "type": "word",
+        "start": 2.704,
+        "end": 2.96
+      },
+      {
+        "text": "chuẩn",
+        "type": "word",
+        "start": 3,
+        "end": 3.2
+      },
+      {
+        "text": "vị",
+        "type": "word",
+        "start": 3.253,
+        "end": 3.36
+      },
+      {
+        "text": "nhé!",
+        "type": "word",
+        "start": 3.42,
+        "end": 3.76
+      },
+      {
+        "text": "Bấm",
+        "type": "word",
+        "start": 4.12,
+        "end": 4.56
+      },
+      {
+        "text": "Follow",
+        "type": "word",
+        "start": 4.617,
+        "end": 4.96
+      },
+      {
+        "text": "kênh",
+        "type": "word",
+        "start": 5.024,
+        "end": 5.28
+      },
+      {
+        "text": "để",
+        "type": "word",
+        "start": 5.413,
+        "end": 5.68
+      },
+      {
+        "text": "xem",
+        "type": "word",
+        "start": 5.74,
+        "end": 5.92
+      },
+      {
+        "text": "thêm",
+        "type": "word",
+        "start": 5.968,
+        "end": 6.16
+      },
+      {
+        "text": "nhiều",
+        "type": "word",
+        "start": 6.2,
+        "end": 6.4
+      },
+      {
+        "text": "mẹo",
+        "type": "word",
+        "start": 6.48,
+        "end": 6.84
+      },
+      {
+        "text": "hay",
+        "type": "word",
+        "start": 6.89,
+        "end": 7.04
+      },
+      {
+        "text": "mỗi",
+        "type": "word",
+        "start": 7.1,
+        "end": 7.28
+      },
+      {
+        "text": "ngày!",
+        "type": "word",
+        "start": 7.344,
+        "end": 7.76
+      }
+    ],
+    "spoken_duration_secs": 7.76
+  }
+]
